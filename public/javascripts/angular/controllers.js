@@ -50,4 +50,16 @@ $scope.Over = [
     }
 ];
 };
+
+controllers.contact = function($scope){
+    $scope.contactus = [
+        {
+            pos:"Convenor",
+            name:"Dr.S.Karthi",
+            phone: 9566656757,
+            email:"asstdirector.pat@vit.ac.in",
+            des:"Assistant Director - Placement & Training"+'<br>'+  'Associate Professor - SBST, HTS Labs' +'<br>'+ ' VIT University, Vellore. 632014'
+    }
+    ]
+};
 app.controller(controllers);

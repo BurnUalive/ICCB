@@ -96,7 +96,7 @@ main{
 #main_3 p{
     text-align: left;
 }
-#main_3 td{
+#main_3 td ,#main_1 td,#main_1 th{
     text-align: center;
     border: 1px solid rgba(255,255,255,0.4);
 }
