@@ -1,3 +1,7 @@
+#webstorm
+.idea/
+#bower
+public/bower
 # Logs
 logs
 *.log
