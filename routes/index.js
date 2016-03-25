@@ -15,7 +15,7 @@ router.get('/comingSoon',function(req,res){
   res.render('comingSoon');
 });
 router.get('/register',function(req,res){
-  res.render('register');
+  res.render('reg');
 });
 router.get('/contact',function(req,res){
   res.render('contact');

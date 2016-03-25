@@ -1,6 +1,6 @@
 body {
 
-  font: 12px Roboto, sans-serif;
+  font: 14px Roboto, sans-serif;
 }
 
 a {
@@ -12,6 +12,14 @@ main{
 }
 #navbar{
     height: 0px !important;
+}
+.alleft{
+    text-align: left !important;
+}
+.alleft a{
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
 }
 #main_1{
   margin: 0 !important;
@@ -36,12 +44,93 @@ main{
 #main_2 {
     text-align: center;
     padding: 2%;
+    color:rgba(0,0,0,0.7);
 }
+#main_2 h3{
+    margin-top:5%;
+    color:rgba(0,0,0,0.8);
+}
+
 #main_2 .vit img{
     width: 50%;
 }
 #main_2 .brsi img{
     width: 25%;
+}
+#main_2 table{
+    text-align: center;
+
+}
+#main_2 table th{
+    text-align: center;
+    border:1px solid rgba(0,0,0,0.2);
+}
+#main_2 table tr td{
+    text-align: center;
+    border:1px solid rgba(0,0,0,0.2);
+}
+#main_2 table tr{
+    text-align: center;
+
+}
+#main_3{
+    margin: 0 !important;
+    padding: 1% 10% 5% 10% !important;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+#main_3 h1{
+    color: white;
+}
+#main_3 .announcements{
+    padding:  0 5% 5% 5%;
+}
+#main_3 .announcements li{
+    float: left;
+    padding: 2%;
+}
+#main_3 .announcements li a{
+    color: rgba(255,255,255,0.8);
+}
+#main_3 p{
+    text-align: left;
+}
+#main_3 td{
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+#main_4 {
+    text-align: center;
+    padding: 2%;
+    color:rgba(0,0,0,0.7);
+}
+#main_4 h3{
+    margin-top:5%;
+    color:rgba(0,0,0,0.8);
+}
+
+#main_4 .vit img{
+    width: 50%;
+}
+#main_4 .brsi img{
+    width: 25%;
+}
+#main_4 table{
+    text-align: center;
+
+}
+#main_4 table th{
+    text-align: center;
+    border:1px solid rgba(0,0,0,0.2);
+}
+#main_4 table tr td{
+    text-align: center;
+    border:1px solid rgba(0,0,0,0.2);
+}
+#main_4 table tr{
+    text-align: center;
+
 }
 header, main, footer {
   padding-left: 300px !important;
