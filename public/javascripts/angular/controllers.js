@@ -3,7 +3,12 @@
  */
 var controllers = {};
 controllers.header =  function($scope){};
-controllers.main = function($scope){};
+controllers.main = function($scope){
+    $(document).ready(function(){
+        $('.slider').slider({full_width: true});
+    });
+    $('.indicators').css('padding-bottom','3.5em').css('z-index','10');
+};
 controllers.register = function($scope){
     $scope.Indian = [
         {

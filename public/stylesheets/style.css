@@ -1,14 +1,49 @@
 body {
-
+    background-image: url('/images/concrete_seamless.png');
   font: 14px Roboto, sans-serif;
 }
-
+.slab h1,.slab h2,.slab h3,.slab h4,.slab h5,.slab h6{
+  /*  color: rgba(0, 172, 237,1) !important;*/
+}
 a {
   color: #00B7FF;
 }
+nav{
+    position: fixed;
+    z-index: 999;
+    background: rgba(0,0,0,0.8);
+}
+nav a:hover{
+    box-shadow: 0 0 5px 0 rgba(255,255,255,0.1);
+}
+footer{
+    background: rgba(0,0,0,0.8) !important;
+}
+.slabcuts{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: 14.5% 10%;
+}
+.slabcuts a{
+    font-size:200%;
+    color: rgba(0,0,0,0.8);
+}
+.slabcuts:hover{
+
+    box-shadow: 0 0 15px 0px rgba(0,0,0,0.2);
+}
+.slabcuts:last-child{
+    border:none;
+
+
+}
 main{
   padding: 0 !important;
+
   margin: 0 !important;
+
+}
+.slab{
+background: white  !important;;
 }
 #navbar{
     height: 0px !important;
@@ -23,10 +58,11 @@ main{
 }
 #main_1{
   margin: 0 !important;
-  padding: 1% 10% 5% 10% !important;
+  padding: 0!important;
     text-align: center;
-    color: white;
+    color:black;
     font-size: 15px;
+    background: white;
 }
 #main_1 h1{
     color: white;
@@ -132,20 +168,24 @@ main{
     text-align: center;
 
 }
-header, main, footer {
-  padding-left: 300px !important;
-}
-nav{
-  background:none;
-  box-shadow: none;
-}
+
 li .active{
   background: #80cbc4  !important;
 }
 @media only screen and (max-width : 992px) {
+    #main_1{
+        padding-top: 0;
+    }
   header, main, footer {
     padding-left: 0 !important;
   }
+    main div:first-child{
+        margin-top: 3.5em !important;
+    }
+    .row{
+        margin: 0!important;
+        padding: 0 !important;
+    }
   #navbar{
     background:#009688;
     height: 50px !important;
