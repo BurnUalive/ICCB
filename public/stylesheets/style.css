@@ -2,6 +2,12 @@ body {
     background-image: url('/images/concrete_seamless.png');
   font: 14px Roboto, sans-serif;
 }
+.dropdown-content{
+    background: white !important;
+}
+.dropdown-content li{
+    background: white !important;
+}
 .slab h1,.slab h2,.slab h3,.slab h4,.slab h5,.slab h6{
   /*  color: rgba(0, 172, 237,1) !important;*/
 }
@@ -43,7 +49,8 @@ main{
 
 }
 .slab{
-background: white  !important;;
+background: white  !important;
+    padding: 4% !important;
 }
 #navbar{
     height: 0px !important;
@@ -58,7 +65,6 @@ background: white  !important;;
 }
 #main_1{
   margin: 0 !important;
-  padding: 0!important;
     text-align: center;
     color:black;
     font-size: 15px;
@@ -80,11 +86,9 @@ background: white  !important;;
 #main_2 {
     text-align: center;
     padding: 2%;
-    color:rgba(0,0,0,0.7);
 }
 #main_2 h3{
     margin-top:5%;
-    color:rgba(0,0,0,0.8);
 }
 
 #main_2 .vit img{
@@ -113,7 +117,6 @@ background: white  !important;;
     margin: 0 !important;
     padding: 1% 10% 5% 10% !important;
     text-align: center;
-    color: white;
     font-size: 15px;
 }
 #main_3 h1{
@@ -127,14 +130,14 @@ background: white  !important;;
     padding: 2%;
 }
 #main_3 .announcements li a{
-    color: rgba(255,255,255,0.8);
+    color: rgba(0,0,0,0.8);
 }
 #main_3 p{
     text-align: left;
 }
 #main_3 td ,#main_1 td,#main_1 th{
     text-align: center;
-    border: 1px solid rgba(255,255,255,0.4);
+    border: 1px solid rgba(0,0,0,0.2);
 }
 #main_4 {
     text-align: center;
