@@ -11,6 +11,9 @@ body {
 .slab h1,.slab h2,.slab h3,.slab h4,.slab h5,.slab h6{
   /*  color: rgba(0, 172, 237,1) !important;*/
 }
+.slab a{
+    color: #00B7FF !important;
+}
 a {
   color: #00B7FF;
 }
@@ -31,7 +34,7 @@ footer{
 }
 .slabcuts a{
     font-size:200%;
-    color: rgba(0,0,0,0.8);
+    color: rgba(0,0,0,0.8) !important;
 }
 .slabcuts:hover{
 
@@ -42,6 +45,9 @@ footer{
 
 
 }
+.committees .content{
+    text-align: center !important;
+}
 main{
   padding: 0 !important;
 
@@ -49,7 +55,7 @@ main{
 
 }
 .slab{
-background: white  !important;
+background: white;
     padding: 4% !important;
 }
 #navbar{

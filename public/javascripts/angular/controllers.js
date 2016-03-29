@@ -13,45 +13,45 @@ controllers.register = function($scope){
     $scope.Indian = [
         {
         "cat" : "Students (BRSI Members)",
-            "fee1" : 4000,
-            "fee2": 4500
+            "fee1" : 3000,
+            "fee2": 3500
         },
         {
             "cat" : "Students (Non BRSI Members)",
-            "fee1" : 5000,
-            "fee2": 5500
+            "fee1" : 3750,
+            "fee2": 4200
         },
         {
             "cat" : "Full Delegates (BRSI Members)",
-            "fee1" : 	6000,
-            "fee2": 6500
+            "fee1" : 4500,
+            "fee2": 5000
         },
         {
             "cat" : "Full Deledates (Non BRSI Members)	",
-            "fee1" : 7000,
-            "fee2": 7500
+            "fee1" : 5250,
+            "fee2": 5750
         },
         {
             "cat" : "Accompanying Person",
-            "fee1" : 4000,
-            "fee2": 4500
+            "fee1" : 3000,
+            "fee2": 3500
         }
     ];
 $scope.Over = [
     {
         "cat" : "Students",
-        "fee1" : 100,
-        "fee2": 125
+        "fee1" : 75,
+        "fee2": 100
     },
     {
         "cat" : "Full Deledates",
-        "fee1" : 150	,
-        "fee2": 175
+        "fee1" : 112.5	,
+        "fee2": 137.5
     },
     {
         "cat" : "Accompanying Person",
-        "fee1" : 100,
-        "fee2": 125
+        "fee1" : 75,
+        "fee2": 100
     }
 ];
 };
@@ -71,4 +71,5 @@ controllers.paperGeneral = function(){};
 controllers.paperAbstracts = function(){};
 controllers.paperFull = function(){};
 controllers.invite =function(){};
+controllers.committees = function(){};
 app.controller(controllers);

@@ -35,6 +35,10 @@ app.config(function ($routeProvider) {
           templateUrl: '/paperFull',
           controller:'paperFull'
       })
+      .when('/committees',{
+        templateUrl: '/committees',
+        controller:'committees'
+      })
     .otherwise({
       redirectTo: '/'
     });

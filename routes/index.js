@@ -29,4 +29,7 @@ router.get('/paperAbstracts',function(req,res){
 router.get('/paperFull',function(req,res){
   res.render('paperFull');
 });
+router.get('/committees',function(req,res){
+  res.render('committees');
+});
 module.exports = router;
