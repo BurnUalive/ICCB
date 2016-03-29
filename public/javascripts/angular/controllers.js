@@ -67,4 +67,8 @@ controllers.contact = function($scope){
     }
     ]
 };
+controllers.paperGeneral = function(){};
+controllers.paperAbstracts = function(){};
+controllers.paperFull = function(){};
+controllers.invite =function(){};
 app.controller(controllers);

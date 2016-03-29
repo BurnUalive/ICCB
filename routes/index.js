@@ -20,4 +20,13 @@ router.get('/register',function(req,res){
 router.get('/contact',function(req,res){
   res.render('contact');
 });
+router.get('/paperGeneral',function(req,res){
+  res.render('paperGeneral');
+});
+router.get('/paperAbstracts',function(req,res){
+  res.render('paperAbstracts');
+});
+router.get('/paperFull',function(req,res){
+  res.render('paperFull');
+});
 module.exports = router;

@@ -64,11 +64,10 @@ background: white  !important;
     font-weight: bold;
 }
 #main_1{
-  margin: 0 !important;
+
     text-align: center;
     color:black;
     font-size: 15px;
-    background: white;
 }
 #main_1 h1{
     color: white;
@@ -88,7 +87,6 @@ background: white  !important;
     padding: 2%;
 }
 #main_2 h3{
-    margin-top:5%;
 }
 
 #main_2 .vit img{
@@ -113,9 +111,13 @@ background: white  !important;
     text-align: center;
 
 }
+.content{
+    text-align: left;
+}
+.content h5{
+    font-weight: bold;
+}
 #main_3{
-    margin: 0 !important;
-    padding: 1% 10% 5% 10% !important;
     text-align: center;
     font-size: 15px;
 }

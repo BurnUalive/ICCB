@@ -23,6 +23,18 @@ app.config(function ($routeProvider) {
         templateUrl: '/register',
         controller:'register'
       })
+      .when('/paper/general',{
+        templateUrl: '/paperGeneral',
+        controller:'paperGeneral'
+      })
+      .when('/paper/abstracts',{
+          templateUrl: '/paperAbstracts',
+          controller:'paperAbstracts'
+      })
+      .when('/paper/full',{
+          templateUrl: '/paperFull',
+          controller:'paperFull'
+      })
     .otherwise({
       redirectTo: '/'
     });
