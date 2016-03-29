@@ -1,15 +1,12 @@
-<div class="row" style="margin-top:3.5em">
-    <div class="col m2">
-        <span style="visibility: hidden">
-            asda
-        </span>
-    </div>
-    <div id="main_1" class="col m8 slab z-depth-1">
+<div class="row" style="overflow: hidden;height:200px;z-index: -1;position: absolute">
+    <img src="/images/wallpapers/neural.jpg" style="max-width: 100%;z-index: -1"/>
+</div>
+<div class="row">
+    <div id="main_1" class="col m6 offset-m1 slab z-depth-1" style="margin-top: 12%">
 
         <h3>
             Registration
         </h3>
-        <hr />
 
         <p class="alleft">
             Registration to NHBT 2015 is can be done for all delegates who have created a user profile for NHBT 2015
@@ -49,212 +46,269 @@
         </p>
 
     </div>
-</div>
-<div class="row">
-    <div class="col m2">
-        <span style="visibility: hidden">
-            asda
-        </span>
+
+    <div class="col m3 offset-m1" style="padding: 0 !important; margin-top: 11%;margin-bottom: 0">
+        <ul class="collapsible" style="background: white;text-align:center;width: 100%" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header">
+                    <button data-target="modal1" class="modal-trigger" style="background: none;border: none;">
+                        Registration Fee
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <button data-target="modal2" class="modal-trigger" style="background: none;border: none;">Payment
+                    </button>
+                </div>
+                <div class="collapsible-body">
+                    <div class="row">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <button data-target="modal3" class="modal-trigger" style="background: none;border: none;">
+                        Cancellations and Refunds
+                    </button>
+                </div>
+                <div class="collapsible-body">
+                </div>
+            </li>
+        </ul>
     </div>
-    <div id="main_2" class="col m8 slab z-depth-1">
-        <div class="row">
-            <h3>Registration Fee</h3>
-            <hr />
-        </div>
-        <div class="row">
-            <h5><b>Indian Delegates</b></h5>
-            <table>
-                <tr>
-                    <th>
-                        Category
-                    </th>
-                    <th>
-                        Fee (Rs) before 15 Oct 2016
-                    </th>
-                    <th>
-                        Fee (Rs) after 15 Oct 2016
-                    </th>
-                </tr>
-                <tr ng-repeat="a in Indian">
-                    <td>{{a.cat}}</td>
-                    <td>{{a.fee1}}</td>
-                    <td>{{a.fee2}}</td>
-                </tr>
-            </table>
-        </div>
-        <div class="row">
-            <h5><b>Overseas Delegates</b></h5>
-            <table>
-                <tr>
-                    <th>
-                        Category
-                    </th>
-                    <th>
-                        Fee (in US$) before 15 Oct 2016
-                    </th>
-                    <th>
-                        Fee (in US$) after 15 Oct 2016
-                    </th>
-                </tr>
-                <tr ng-repeat="a in Over">
-                    <td>{{a.cat}}</td>
-                    <td>{{a.fee1}}</td>
-                    <td>{{a.fee2}}</td>
-                </tr>
-            </table>
-        </div>
+    <div class="col m3 s12 slab offset-m1 z-depth-1 dates" style="padding: 3% 5% !important;">
+        <h5>Important Dates</h5>
+        <ul>
+            <li>Submission of abstracts</li>
+            <li>Acceptance Notification</li>
+            <li>Registration at normal rate</li>
+            <li>Booking of Accomodation</li>
+        </ul>
+    </div>
+    <div class="col m3 s12 slab offset-m1 z-depth-1 links" style="padding: 3% 5% !important;">
+        <h5>Important Links</h5>
+        <ul>
+            <li><a href="#/comingSoon">Login</a></li>
+            <li><a href="#/register">Register</a></li>
+            <li><a href="#/comingSoon">Program Schedule</a></li>
+            <li><a href="#/contact">Contact Us</a></li>
+        </ul>
     </div>
 </div>
-<div class="row">
-    <div class="col m2">
-        <span style="visibility: hidden">
-            asda
-        </span>
-    </div>
-    <div id="main_3" class="col m8 z-depth-1 slab">
-        <div class="row">
-            <h3>Payment</h3>
-            <small>All payment should be made as below</small>
-            <hr />
+<div id="modal1" class="modal modal-fixed-footer " style="width: 70%;min-height:90%">
+    <div class="modal-content">
+        <div class="row" style="padding: 5%;">
+            <div id="main_2" class="col m12 s12 slab z-depth-1">
+                <div class="row">
+                    <h3>Registration Fee</h3>
+                </div>
+                <div class="row">
+                    <h5><b>Indian Delegates</b></h5>
+                    <table>
+                        <tr>
+                            <th>
+                                Category
+                            </th>
+                            <th>
+                                Fee (Rs) before 15 Oct 2016
+                            </th>
+                            <th>
+                                Fee (Rs) after 15 Oct 2016
+                            </th>
+                        </tr>
+                        <tr ng-repeat="a in Indian">
+                            <td>{{a.cat}}</td>
+                            <td>{{a.fee1}}</td>
+                            <td>{{a.fee2}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row">
+                    <h5><b>Overseas Delegates</b></h5>
+                    <table>
+                        <tr>
+                            <th>
+                                Category
+                            </th>
+                            <th>
+                                Fee (in US$) before 15 Oct 2016
+                            </th>
+                            <th>
+                                Fee (in US$) after 15 Oct 2016
+                            </th>
+                        </tr>
+                        <tr ng-repeat="a in Over">
+                            <td>{{a.cat}}</td>
+                            <td>{{a.fee1}}</td>
+                            <td>{{a.fee2}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <ol>
-                <li><p>By bank transfer for which details are as below:</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#/register" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+    </div>
+</div>
+<div id="modal2" class="modal modal-fixed-footer " style="width: 70%;min-height:90%">
+    <div class="modal-content">
+        <div class="row" style="padding: 5%;">
+            <div id="main_3" class="col m12 s12 z-depth-1 slab">
+                <div class="row">
+                    <h3>Payment</h3>
+                    <small>All payment should be made as below</small>
+                </div>
+                <div class="row">
+                    <ol>
+                        <li><p>By bank transfer for which details are as below:</p>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Account name
+                                    </td>
+                                    <td>
+                                        Vellore Institute of Technology
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Account no
+                                    </td>
+                                    <td>
+                                        407580397
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Bank name
+                                    </td>
+                                    <td>
+                                        Indian Bank, VIT Branch
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Branch name and address
+                                    </td>
+                                    <td>
+                                        VIT Branch, Katpadi, Vellore
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        MICR Code
+                                    </td>
+                                    <td>
+                                        632019008
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        IFSC
+                                    </td>
+                                    <td>
+                                        IDIB000V086
+                                    </td>
+                                </tr>
+                            </table>
+                            <small>Please include the bank transaction ID and other details in the appropriate column in
+                                the
+                                registration page.
+                            </small>
+                        </li>
+                        <li>
+                            <p>
+                                By bank draft drawn in favour of NIIST, Trivandrum,
+                            </p>
+
+                            <p>
+                                Please include the DD number, Date and other details in the registration page and the
+                                original
+                                DD should be sent to
+                            </p>
+                            <table>
+                                <tr>
+                                    <td>Dr S. Karthi</td>
+                                </tr>
+                                <tr>
+                                    <td>Convener, ICCB 2016</td>
+                                </tr>
+                                <tr>
+                                    <td>Assistant Director - Placement & Training
+                                        <br/>
+                                        Associate Professor - SBST, HTS Labs
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Vellore Institute of Technology, Vellore</td>
+                                </tr>
+                                <tr>
+                                    <td>Vellore-632014, Tamil Nadu, India</td>
+                                </tr>
+                                <tr>
+                                    <td>Phone: +91 948 6251937</td>
+                                </tr>
+                                <tr>
+                                    <td>Email: TBD</td>
+                                </tr>
+                            </table>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#/register" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+    </div>
+</div>
+<div id="modal3" class="modal modal-fixed-footer " style="width: 70%;">
+    <div class="modal-content">
+        <div class="row" style="padding: 5%;">
+            <div id="main_2" class="col m12 s12 slab z-depth-1">
+                <div class="row">
+                    <h3>
+                        Cancellations and Refunds
+                    </h3>
+                </div>
+                <div class="row">
+                    <p>
+                        Cancellation can be done by sending a email request quoting your user ID and registered email to
+                        nhbt2015@gmail.com. Please include "Request for Cancellation of Registration" in the Subject
+                        line of the
+                        mail.
+
+                        Upon cancellation, the refunds of registration fee would be made as follows:
+                    </p>
                     <table>
                         <tr>
                             <td>
-                                Account name
+                                Before 31.10.2016
                             </td>
                             <td>
-                                Vellore Institute of Technology
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Account no
-                            </td>
-                            <td>
-                               407580397
+                                50% refund
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Bank name
+                                After 31.10.2015
                             </td>
                             <td>
-                                Indian Bank, VIT Branch
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Branch name and address
-                            </td>
-                            <td>
-                                VIT Branch, Katpadi, Vellore
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                MICR Code
-                            </td>
-                            <td>
-                                632019008
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                IFSC
-                            </td>
-                            <td>
-                                IDIB000V086
+                                No refund
                             </td>
                         </tr>
                     </table>
-                    <small>Please include the bank transaction ID and other details in the appropriate column in the
-                        registration page.
-                    </small>
-                </li>
-                <li>
-                    <p>
-                        By bank draft drawn in favour of NIIST, Trivandrum,
-                    </p>
 
-                    <p>
-                        Please include the DD number, Date and other details in the registration page and the original
-                        DD should be sent to
-                    </p>
-                    <table>
-                        <tr>
-                            <td>Dr S. Karthi</td>
-                        </tr>
-                        <tr>
-                            <td>Convener, ICCB 2016</td>
-                        </tr>
-                        <tr>
-                            <td>Assistant Director - Placement & Training
-                                <br />
-                                Associate Professor - SBST, HTS Labs</td>
-                        </tr>
-                        <tr>
-                            <td>Vellore Institute of Technology, Vellore</td>
-                        </tr>
-                        <tr>
-                            <td>Vellore-632014, Tamil Nadu, India</td>
-                        </tr>
-                        <tr>
-                            <td>Phone: +91 948 6251937</td>
-                        </tr>
-                        <tr>
-                            <td>Email: TBD</td>
-                        </tr>
-                    </table>
-                </li>
-
-            </ol>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col m2">
-        <span style="visibility: hidden">
-            asda
-        </span>
-    </div>
-    <div id="main_4" class="slab col m8 z-depth-1">
-        <div class="row">
-            <h3>
-                Cancellations and Refunds
-            </h3>
-            <hr />
-        </div>
-        <div class="row">
-            <p>
-                Cancellation can be done by sending a email request quoting your user ID and registered email to
-                nhbt2015@gmail.com. Please include "Request for Cancellation of Registration" in the Subject line of the
-                mail.
-
-                Upon cancellation, the refunds of registration fee would be made as follows:
-            </p>
-            <table>
-                <tr>
-                    <td>
-                        Before 31.10.2016
-                    </td>
-                    <td>
-                        50% refund
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        After 31.10.2015
-                    </td>
-                    <td>
-                        No refund
-                    </td>
-                </tr>
-            </table>
-
-        </div>
+    <div class="modal-footer">
+        <a href="#/register" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
     </div>
 </div>
 <script type="text/javascript">

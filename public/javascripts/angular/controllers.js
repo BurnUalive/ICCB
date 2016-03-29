@@ -10,6 +10,14 @@ controllers.main = function($scope){
     $('.indicators').css('padding-bottom','3.5em').css('z-index','10');
 };
 controllers.register = function($scope){
+
+
+    $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+    });
+
+
     $scope.Indian = [
         {
         "cat" : "Students (BRSI Members)",
@@ -19,7 +27,7 @@ controllers.register = function($scope){
         {
             "cat" : "Students (Non BRSI Members)",
             "fee1" : 3750,
-            "fee2": 4200
+            "fee2": 4250
         },
         {
             "cat" : "Full Delegates (BRSI Members)",
@@ -45,8 +53,8 @@ $scope.Over = [
     },
     {
         "cat" : "Full Deledates",
-        "fee1" : 112.5	,
-        "fee2": 137.5
+        "fee1" : 115	,
+        "fee2": 140
     },
     {
         "cat" : "Accompanying Person",
@@ -70,6 +78,8 @@ controllers.contact = function($scope){
 controllers.paperGeneral = function(){};
 controllers.paperAbstracts = function(){};
 controllers.paperFull = function(){};
-controllers.invite =function(){};
+controllers.invite =function($scope){
+
+};
 controllers.committees = function(){};
 app.controller(controllers);
