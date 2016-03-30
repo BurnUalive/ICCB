@@ -5,9 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
-
+var routes = require(path.join(__dirname, 'routes', 'index'));
+var users = require(path.join(__dirname, 'routes', 'users'));
+var mongo = require('express-mongo-db');
+var MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost/ICCB';
 var app = express();
 
 // view engine setup
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(mongo(MONGO_URL));
 
 app.use('/', routes);
 app.use('/users', users);
