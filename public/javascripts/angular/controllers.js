@@ -316,6 +316,161 @@ controllers.committees = function($scope){
             }
         ]
     };
+    var set3 = {
+        "name":" International Advisory Committee",
+        "committee":[
+            {
+                "name":"Bhoopathy, Raj",
+                "institute":"University of Nicholls, USA"
+            },
+            {
+                "name":"Castro, Guillermo R",
+                "institute":"Universidad Nacional de La Plata, La Plata, Argentina"
+            },
+            {
+                "name":"Chang, In Seop",
+                "institute":"Gwangju Institute of Science and Technology, Gwangju, South Korea"
+            },
+            {
+                "name":"Chang, Jo Shu",
+                "institute":"National Cheng Kung University, Taiwan"
+            },
+            {
+                "name":"Dosoretz, Carlos",
+                "institute":"Technicon, Israel Institute of Technology, Haifa, Israel"
+            },
+            {
+                "name":"Ferreira-Dias, Suzana",
+                "institute":"Technical University of Lisbon, Lisbon, Portugal"
+            },
+            {
+                "name":"Gnansonou, Edgard",
+                "institute":"École Polytechnique Fédérale de Lausanne (EPFL), Lausanne, Switzerland"
+            },
+            {
+                "name":"Janecek, Stefan",
+                "institute":"Institute of Molecular Biology, Slovak Academy of Sciences, Bratislava, Slovakia"
+            },
+            {
+                "name":"Kaul, Sunil C ",
+                "institute":"National Institute of Advanced Industrial Science & Technology, Japan"
+            },
+            {
+                "name":"Khanal, Samir ",
+                "institute":"University of Hawaii at Mãnoa, Honolulu, Hawaii, USA"
+            },
+            {
+                "name":"Kondo, Akihiko",
+                "institute":"Kobe University, Kobe, Japan"
+            },
+            {
+                "name":"Larroche, Christian",
+                "institute":"Universite Blaise Pascal, Clermont Ferrand, France"
+            },
+            {
+                "name":"Lee, Duu Jong",
+                "institute":"National Taiwan University, Taipei, Taiwan"
+            },
+            {
+                "name":"Lee, Keat Teong ",
+                "institute":"Universiti Sains Malaysia, Pulau Pinang, Malaysia"
+            },
+            {
+                "name":"Ngo, Hao Huu  ",
+                "institute":"University of Technology, Sydney, Australia"
+            },
+            {
+                "name":"Nigam, Poonam ",
+                "institute":"University of Ulster, Coleraine, Co. Londonderry, Northern Ireland, UK"
+            },
+            {
+                "name":"Papamichael, Emmanuel M ",
+                "institute":"University of Ioannina, Greece"
+            },
+            {
+                "name":"Park, Jong Moon ",
+                "institute":"Pohang University of Science and Technology, Pohang, Gyeongbuk, South Korea"
+            },
+            {
+                "name":"Ruan, Roger ",
+                "institute":"University of Minnesota, USA"
+            },
+            {
+                "name":"Sanroman, Maria Angeles",
+                "institute":"Universidad de Vigo, Vigo, Spain"
+            },
+            {
+                "name":"Saucedo-Castaneda, Gerardo",
+                "institute":"Universidad Autónoma Metropolitana-Iztapalapa, México"
+            },
+            {
+                "name":"Soccol, Carlos Ricardo",
+                "institute":"Federal University of Parana, Curitiba, Brazil"
+            },
+            {
+                "name":"Tahezadeh, Mohammad",
+                "institute":"University of Borås, Borås, Sweden"
+            },
+            {
+                "name":"Tyagi, Rajeshwar Dayal",
+                "institute":"INRS, Quebec, Canada"
+            },
+            {
+                "name":"Visvanathan, C ",
+                "institute":"Asian Institute of Technology, Klongluang, Pathumthani, Thailand"
+            },
+            {
+                "name":"Wong, Jonathan",
+                "institute":"Hong Kong Baptist University, Hong Kong"
+            }
+        ]
+    };
+    var set4 = {
+        "name":"VIT Working Committee",
+        "committee":[
+            {
+                "name":"Dr. M.Rasool",
+                "institute":"Organizing Secretary"
+            },
+            {
+                "name":"Dr. K.Ramanathan",
+                "institute":"Organizing Secretary"
+            },
+            {
+                "name":"Dr. M.Arabi Saleh",
+                "institute":"Organizing Secretary"
+            },
+            {
+                "name":"Dr.  Arnold Ememerson",
+                "institute":"Organizing Secretary"
+            },
+            {
+                "name":"Dr. V. Mohana Srinivasan",
+                "institute":"Organizing Secretary"
+            },
+            {
+                "name":"Dr. A. Sivakumar",
+                "institute":"Joint Secretary"
+            },
+            {
+                "name":"Dr. Febin Prabhudass",
+                "institute":"Joint Secretary"
+            },
+            {
+                "name":"Dr. S.Vino",
+                "institute":"Joint Secretary"
+            },
+            {
+                "name":"Dr.K.Suthindiran",
+                "institute":"Joint Secretary"
+            },
+            {
+                "name":"Dr. Jabaz Osborne",
+                "institute":"Joint Secretary"
+            }
+        ]
+    };
+
 
     $scope.setArr = function(i){
         if(i==1)
