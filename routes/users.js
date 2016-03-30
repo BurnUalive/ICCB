@@ -1,9 +1,17 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+var authenticated = function (req, res, next) {
+    if (req.signedCookies.name) {
+        return next();
+    }
+    else {
+        res.redirect('/');
+    }
+};
+
+router.get('/', authenticated, function (req, res) {
+
 });
 
 module.exports = router;

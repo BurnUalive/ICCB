@@ -2,6 +2,15 @@ var express = require('express');
 var router = express.Router();
 var bcrypt = require('bcrypt');
 
+var authenticated = function (req, res, next) {
+    if (req.signedCookies.name) {
+        res.redirect('/users');
+    }
+    else {
+        return next();
+    }
+};
+
 router.get('/', function (req, res) {
     res.render('index', {title: 'ICCB'});
 });
@@ -14,7 +23,7 @@ router.get('/invite', function (req, res) {
 router.get('/comingSoon', function (req, res) {
     res.render('comingSoon');
 });
-router.get('/register', function (req, res) {
+router.get('/register', authenticated, function (req, res) {
     res.render('reg');
 });
 router.get('/contact', function (req, res) {
@@ -58,25 +67,25 @@ router.post('/register', function (req, res) {
         db.insert(data, onInsert);
     });
 });
-router.get('/login', function(req, res) {
+router.get('/login', authenticated, function (req, res) {
     res.render('login', {message: null});
 });
-router.post('/login', function(req, res) {
-   let data = {
-       id: req.body.username,
-       password: req.body.password
-   };
-   let db = req.db.collection('users');
+router.post('/login', function (req, res) {
+    let data = {
+        id: req.body.username,
+        password: req.body.password
+    };
+    let db = req.db.collection('users');
     db.findOne({id: data.id}, function (err, doc) {
         if (!err && doc) {
-            bcrypt.compare(data.password, doc.password, function(err, result){
-               if (result) {
-                   res.cookie('name', data.id, {maxAge: 86400000, signed: true});
-                   res.redirect('/users');
-               }
+            bcrypt.compare(data.password, doc.password, function (err, result) {
+                if (result) {
+                    res.cookie('name', data.id, {maxAge: 86400000, signed: true});
+                    res.redirect('/users');
+                }
                 else {
-                   res.redirect('/login', {message: 'Invalid Credentials'});
-               }
+                    res.redirect('/login', {message: 'Invalid Credentials'});
+                }
             });
         }
         else {
@@ -84,7 +93,7 @@ router.post('/login', function(req, res) {
         }
     });
 });
-router.get('/logout', function (req,res) {
+router.get('/logout', function (req, res) {
     res.clearCookie('name', {});
     res.redirect('/');
 });
