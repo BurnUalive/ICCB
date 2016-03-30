@@ -483,4 +483,72 @@ controllers.committees = function($scope){
             $scope.arr = set4;
     };
 };
+controllers.sciProg = function($scope){
+    $scope.programs = [
+        {
+            "name":'Industrial Biotechnology (IB)',
+            'courses':[
+                'IB 1 Bioprocesses & Products development',
+                'IB 2 Biocatalyses & Biotransformations',
+                'IB 3 Bioprocess monitoring, modeling and control',
+                'IB 4 Downstream Processing',
+                'IB 5 Animal cell culture for bioproducts'
+            ]
+        },
+        {
+            "name":'Biofuels and Biorefineries (BR)',
+            'courses':[
+                'BR 1 Algal Cultivation & Harvesting',
+                'BR 2 Biofuels from Algae',
+                'BR 3 Lignocellulosic Bioethanol',
+                'BR 4 Thermochemical platform for fuels and chemicals',
+                'BR 5 Pretreatment Technologies',
+                'BR 6 Biodiesel',
+                'EB 7 Biohydrogen'
+            ]
+        },
+        {
+            "name":'Food and Agricultural Biotechnology (FAB)',
+            'courses':[
+                'FAB 1 Food Fermentation, Processing and Food Microbiology',
+                'FAB 2 Pre & Probiotics, Functional Foods/Nutraceuticals',
+                'FAB 3 Plant Growth Promoting Microbes and Plant Microbe interactions',
+                'FAB 4 Plant Tissue culture and micropropagation',
+                'FAB 5 GM crops and hybrid crops'
+            ]
+        },
+        {
+            "name":'Medical Biotechnology (MB)',
+            'courses':[
+                'MB 1 Health Care Biotechnology',
+                'MB 2 Diagnostic Platforms Technologies',
+                'MB 3 Vaccines',
+                'MB 4 Stem cells and Stem cell Technologies',
+                'MB 5 Cancer Research'
+            ]
+        },
+        {
+            "name":'Environmental Biotechnology (EB)',
+            'courses':[
+                'EB 1 Anaerobic digestion',
+                'EB 2 Aerobic digestion',
+                'EB 3 Industrial effluent treatment',
+                'EB 4 Solid waste management'
+            ]
+        },
+        {
+            "name":'Basic and Applied Molecular Biology and Bioinfromatics (BAMB)',
+            'courses':[
+                'BAMB 1 Metabolic pathways/Signal transduction/Metabolic engineering',
+                'BAMB 2 Molecular cloning /Recombinant DNA',
+                'BAMB 3 Structure Biology /Structure function relationships/homology modeling',
+                'BAMB 4 Genomics/Proteomics/Expression Analyses',
+                'BAMB 5 Gene Regulation/RNAi/miRNA',
+                'BAMB 6 Applied Molecular Biology',
+                'BAMB 7 Computational Biology/Software',
+                'BAMB 8 Bioinformatics in drug discovery'
+            ]
+        }
+    ];
+};
 app.controller(controllers);

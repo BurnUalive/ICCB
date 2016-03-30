@@ -129,7 +129,7 @@ main {
 #main_2 {
     text-align: center;
     padding: 2%;
-    margin-top: -7% !important;
+    margin-top: -13% !important;
 }
 
 #main_2 h3 {
@@ -142,7 +142,9 @@ main {
 #main_2 .vit img {
     width: 50%;
 }
-
+.rounded{
+    border-radius: 60px;
+}
 .collapsible-body th, .collapsible-body td {
     border: 1px solid rgba(0, 0, 0, 0.3);
 }

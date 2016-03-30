@@ -1,0 +1,59 @@
+<div class="row" style="overflow: hidden;height:200px;z-index: -1;position: absolute">
+    <img src="/images/wallpapers/neural.jpg" style="max-width: 100%;z-index: -1"/>
+</div>
+<div class="row" style="">
+    <div id="main_1" class="slab z-depth-1 col m6 offset-m1" style=" padding:2% !important;margin-top: 12%">
+
+        <h3>
+            Scientific Programs
+        </h3>
+
+       <ul>
+           <li>
+               <h5>
+                   Technical sessions
+               </h5>
+               <p>
+                   There will be technical sessions comprising invited lectures and contributory short oral and poster presentations covering different
+
+                   areas of biotechnology. The sessions along with the codes (in parentheses) are given below.  These would be presented in three
+
+                   parallel sessions and two poster sessions.
+               </p>
+           </li>
+           <li ng-repeat=" program in programs">
+               <h5>
+                   {{program.name}}
+               </h5>
+               <ul>
+                   <li ng-repeat="course in program.courses">{{course}}</li>
+               </ul>
+           </li>
+       </ul>
+    </div>
+    <div class="col m3 s12 slab offset-m1 z-depth-1 dates" style="padding: 3% 5% !important;margin-top: 12%">
+        <h5>Important Dates</h5>
+        <ul>
+            <li>Submission of abstracts</li>
+            <li>Acceptance Notification</li>
+            <li>Registration at normal rate</li>
+            <li>Booking of Accomodation</li>
+        </ul>
+    </div>
+    <div class="col m3 s12 slab offset-m1 z-depth-1 links" style="padding: 3% 5% !important;">
+        <h5>Important Links</h5>
+        <ul>
+            <li><a href="#/comingSoon">Login</a></li>
+            <li><a href="#/register">Register</a></li>
+            <li><a href="#/comingSoon">Program Schedule</a></li>
+            <li><a href="#/contact">Contact Us</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    window.onload = function () {
+        if (window.location.href.indexOf("/#/sciPrograms") == -1) {
+            window.location.assign("/#/sciPrograms")
+        }
+    };
+</script>

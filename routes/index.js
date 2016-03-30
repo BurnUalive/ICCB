@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var bcrypt = require('bcrypt');
+//var bcrypt = require('bcryptjs');
 
 var authenticated = function (req, res, next) {
     if (req.signedCookies.name) {
@@ -41,6 +41,9 @@ router.get('/paperFull', function (req, res) {
 router.get('/committees', function (req, res) {
     res.render('committees');
 });
+router.get('/sciProg',function(req,res){
+    res.render('sciProg');
+});/*
 router.post('/register', function (req, res) {
     let data = {
         name: req.body.name,
@@ -66,10 +69,10 @@ router.post('/register', function (req, res) {
         data.id = 'ICCB2016' + data.id;
         db.insert(data, onInsert);
     });
-});
+});*/
 router.get('/login', authenticated, function (req, res) {
     res.render('login', {message: null});
-});
+});/*
 router.post('/login', function (req, res) {
     let data = {
         id: req.body.username,
@@ -92,7 +95,7 @@ router.post('/login', function (req, res) {
             res.redirect('/login', {message: 'Username Not Found'});
         }
     });
-});
+});*/
 router.get('/logout', function (req, res) {
     res.clearCookie('name', {});
     res.redirect('/');

@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(mongo(MONGO_URL));
-
+/*
 app.use(multer({
     dest: './paper-submissions/',
     rename: function (fieldname, filename) {
@@ -35,7 +35,7 @@ app.use(multer({
         files: 1
     }
 }));
-
+*/
 app.use('/', routes);
 app.use('/users', users);
 
