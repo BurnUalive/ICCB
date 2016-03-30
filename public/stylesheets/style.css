@@ -108,7 +108,8 @@ main {
 #main_1 h1 {
     color: white;
 }
-#main_1 h3{
+
+#main_1 h3 {
     text-align: center;
 }
 
@@ -133,24 +134,31 @@ main {
 
 #main_2 h3 {
 }
-.collapsible-header{
+
+.collapsible-header {
     font-weight: 500;
 }
+
 #main_2 .vit img {
     width: 50%;
 }
-.collapsible-body th,.collapsible-body td{
-    border:1px solid rgba(0,0,0,0.3);
+
+.collapsible-body th, .collapsible-body td {
+    border: 1px solid rgba(0, 0, 0, 0.3);
 }
-.collapsible-body{
+
+.collapsible-body {
     padding: 5% !important;
 }
-.collapsible-body h3,.collapsible-body h5,.collapsible-body p{
+
+.collapsible-body h3, .collapsible-body h5, .collapsible-body p {
     text-align: justify !important;
 }
-.collapsible-body p{
-    padding:2% !important;
+
+.collapsible-body p {
+    padding: 2% !important;
 }
+
 #main_2 .brsi img {
     width: 25%;
 }
@@ -175,7 +183,7 @@ main {
 
 }
 
-.content div div{
+.content div div {
     text-align: center !important;
 }
 
@@ -256,19 +264,24 @@ main {
 li .active {
     background: #80cbc4 !important;
 }
-.foot{
-    display:none;
+
+.foot {
+    display: none;
 }
+
 @media only screen and (max-width: 992px) {
-    .links{
+    .links {
         display: none;
     }
-    .dates{
-        display:none;
+
+    .dates {
+        display: none;
     }
-    .foot{
-        display:block;
+
+    .foot {
+        display: block;
     }
+
     #main_1 {
         padding-top: 0;
     }
@@ -276,6 +289,7 @@ li .active {
     header, main, footer {
         padding-left: 0 !important;
     }
+
     .row {
         margin: 0 !important;
         padding: 0 !important;
