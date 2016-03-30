@@ -182,7 +182,9 @@ main {
     text-align: center;
 
 }
-
+.abstracts .content p{
+    text-align: justify !important;
+}
 .content div div {
     text-align: center !important;
 }
