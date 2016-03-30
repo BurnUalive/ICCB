@@ -9,7 +9,7 @@ var multer = require('multer');
 var routes = require(path.join(__dirname, 'routes', 'index'));
 var users = require(path.join(__dirname, 'routes', 'users'));
 var mongo = require('express-mongo-db');
-var MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost/ICCB';
+var MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost/iccb';
 var app = express();
 
 // view engine setup
