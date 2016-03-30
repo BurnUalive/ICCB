@@ -282,19 +282,6 @@ li .active {
         display: block;
     }
 
-    #main_1 {
-        padding-top: 0;
-    }
-
-    header, main, footer {
-        padding-left: 0 !important;
-    }
-
-    .row {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
 }
 
 /* Marquee */
