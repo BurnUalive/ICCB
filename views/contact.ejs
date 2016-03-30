@@ -1,33 +1,51 @@
+<div class="row" style="overflow: hidden;height:200px;z-index: -1;position: absolute">
+    <img src="/images/wallpapers/neural.jpg" style="max-width: 100%;z-index: -1"/>
+</div>
 <div class="row" style="">
-    <div class="col m2">
-        <span style="visibility: hidden">asd</span>
-
-    </div>
-    <div id="main_1" class=" col m8 slab z-depth-1">
+    <div id="main_1" class="slab z-depth-1 col m6 offset-m1" style=" padding:2% !important;margin-top: 12%">
 
         <h3>
             Contact Us
         </h3>
 
-        <table>
-            <tr>
-                <th>Position</th>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Designation</th>
-            </tr>
-            <tr ng-repeat="a in contactus">
-                <td>{{a.pos}}</td>
-                <td>{{a.name}}</td>
-                <td>{{a.phone}}</td>
-                <td>{{a.email}}</td>
-                <td ng-bind-html="a.des"></td>
-            </tr>
-        </table>
+            <ul>
+           <li> <b>Dr.S.Babu,Dr.K.M.Gothandam & Dr.S.Karthi</b></li>
+                <li>  Convener's - ICCB-2016</li>
+                <li>  VIT University,Vellore</li>
+                <li>  E-mail: iccb16@vit.ac.in</li>
+                <li> Registration Whatsapp: 9944807642, 9486802902, 9486667687</li>
+                <li> Website: <a href="http://www.vit.ac.in/ICCB2016" target="_blank">www.vit.ac.in/ICCB2016</a></li>
+                <li> Facebook: <a href="http://www.vit.ac.in/ICCB2016" target="_blank">www.facebook.com/ICCB2016</a></li>
+        </ul>
 
     </div>
+    <div class="col m3 s12 slab offset-m1 z-depth-1 dates" style="padding: 3% 5% !important;margin-top: 12%">
+        <h5>Important Dates</h5>
+        <ul>
+            <li>Submission of abstracts</li>
+            <li>Acceptance Notification</li>
+            <li>Registration at normal rate</li>
+            <li>Booking of Accomodation</li>
+        </ul>
+    </div>
+    <div class="col m3 s12 slab offset-m1 z-depth-1 links" style="padding: 3% 5% !important;">
+        <h5>Important Links</h5>
+        <ul>
+            <li><a href="#/comingSoon">Login</a></li>
+            <li><a href="#/register">Register</a></li>
+            <li><a href="#/comingSoon">Program Schedule</a></li>
+            <li><a href="#/contact">Contact Us</a></li>
+        </ul>
+    </div>
 </div>
+
+<script type="text/javascript">
+    window.onload = function () {
+        if (window.location.href.indexOf("/#/invite") == -1) {
+            window.location.assign("/#/invite")
+        }
+    };
+</script>
 <script type="text/javascript">
     window.onload = function () {
         if (window.location.href.indexOf("/#/contact") == -1) {
