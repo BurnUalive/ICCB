@@ -426,7 +426,7 @@ controllers.committees = function($scope){
         ]
     };
     var set4 = {
-        "name":"VIT Working Committee",
+        "name":"Local Working Committee",
         "committee":[
             {
                 "name":"Dr. M.Rasool",
