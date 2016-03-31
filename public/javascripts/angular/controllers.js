@@ -551,4 +551,114 @@ controllers.sciProg = function($scope){
         }
     ];
 };
+controllers.accommodation =function(){};
+controllers.venue =function(){
+    initMap();
+};
+controllers.awards =function(){};
+controllers.exhibition =function(){};
+controllers.posters =function(){};
+controllers.socialPrograms =function(){};
+controllers.ads =function($scope){
+    $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+    });
+    $scope.categories1 = [
+        {
+            'name':'Advertisement on  ICCB website (200x 150 pix) banner on home page*',
+            'mono':'-',
+            'multi':'Rs 40,000'
+        },
+        {
+            'name':'Advertisement on  ICCB  website (200x 150 pix) banner on other pages*',
+            'mono':'-',
+            'multi':'Rs 20,000'
+        },
+        {
+            'name':'Advertisement on  ICCB  website (200x 300 pix) banner on other pages*',
+            'mono':'-',
+            'multi':'Rs 20,000'
+        },
+        {
+            'name':'Advertisement on  ICCB  website (200x 70 pix) banner on other pages*',
+            'mono':'-',
+            'multi':'Rs 10000'
+        },
+        {
+            'name':'Abstract Book Back cover (outer)',
+            'mono':'Rs.30,000',
+            'multi':'Rs. 35,000'
+        },
+        {
+            'name':'Abstract Book Front or Back cover (inner)',
+            'mono':'Rs. 25,000',
+            'multi':'Rs. 30,000'
+        },
+        {
+            'name':'Abstract Book Full Page',
+            'mono':'Rs. 10,000',
+            'multi':'Rs. 20,000'
+        }
+    ];
+    $scope.categories2 = [
+        [
+            'I (Contact us)',
+            '+ (1)',
+            '',
+            '+ (3)',
+            '+ (2)',
+            'Color',
+            '',
+            '+',
+            '',
+            '+'
+        ],
+        [
+            'II (50,000)',
+            '',
+            '+(1)',
+            '+(2)',
+            '+ (2)',
+            'Color',
+            '',
+            '',
+            '+',
+            '+'
+        ],
+        [
+            'III (30000)',
+            '',
+            '',
+            '+ (2)',
+            '+(2)',
+            '',
+            'Color',
+            '',
+            '',
+            ''],
+        [
+            'IV (25000)',
+            '',
+            '',
+            '+(2)',
+            '+(1)',
+            '',
+            'B &W',
+            '',
+            '',
+            ''],
+        [
+            'V (20000)',
+            '',
+            '',
+            '+ (1)',
+            '+ (1)',
+            '',
+            'B &W',
+            '',
+            '',
+            '']
+    ];
+};
 app.controller(controllers);

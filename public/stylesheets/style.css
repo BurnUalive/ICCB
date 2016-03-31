@@ -184,8 +184,14 @@ main {
     text-align: center;
 
 }
-.abstracts .content p{
+.abstracts .content p,.poster .content p{
     text-align: justify !important;
+}
+.poster .content li{
+    text-align: left !important;
+}
+.poster .content li ul li{
+    list-style: circle;
 }
 .content div div {
     text-align: center !important;
@@ -199,11 +205,20 @@ main {
     text-align: center;
     font-size: 15px;
 }
+footer a{
+    padding: 0% 1%;
+}
 
 #main_3 h1 {
     color: white;
 }
-
+.ads th, .ads td{
+    border:1px solid rgba(0,0,0,0.3);
+    padding: 1%;
+}
+.ads td{
+    text-align: center;
+}
 #main_3 .announcements {
     padding: 0 5% 5% 5%;
 }

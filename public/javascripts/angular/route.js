@@ -43,6 +43,38 @@ app.config(function ($routeProvider) {
             templateUrl: '/sciProg',
             controller: 'sciProg'
         })
+        .when('/posters', {
+            templateUrl: '/posters',
+            controller: 'posters'
+        })
+        .when('/awards', {
+            templateUrl: '/awards',
+            controller: 'awards'
+        })
+        .when('/exhibition', {
+            templateUrl: '/exhibition',
+            controller: 'exhibition'
+        })
+        .when('/socialprograms', {
+            templateUrl: '/socialPrograms',
+            controller: 'socialPrograms'
+        })
+        .when('/venue', {
+            templateUrl: '/venue',
+            controller: 'venue'
+        })
+        .when('/accommodation', {
+            templateUrl: '/accomodation',
+            controller: 'accommodation'
+        })
+        .when('/ads', {
+            templateUrl: '/ads',
+            controller: 'ads'
+        })
+        .when('/sponsors', {
+            templateUrl: '/sponsors',
+            controller: 'sponsors'
+        })
         .otherwise({
             redirectTo: '/'
         });

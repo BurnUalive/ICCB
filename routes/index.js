@@ -43,7 +43,32 @@ router.get('/committees', function (req, res) {
 });
 router.get('/sciProg',function(req,res){
     res.render('sciProg');
-});/*
+});
+router.get('/posters',function(req,res){
+    res.render('posters');
+});
+router.get('/awards',function(req,res){
+    res.render('awards');
+});
+router.get('/exhibition',function(req,res){
+    res.render('exhibition');
+});
+router.get('/socialPrograms',function(req,res){
+    res.render('socialPrograms');
+});
+router.get('/venue',function(req,res){
+    res.render('venue');
+});
+router.get('/accomodation',function(req,res){
+    res.render('accomodation');
+});
+router.get('/ads',function(req,res){
+    res.render('ads');
+});
+router.get('/sponsors',function(req,res){
+    res.render('sponsors');
+});
+/*
 router.post('/register', function (req, res) {
     let data = {
         name: req.body.name,

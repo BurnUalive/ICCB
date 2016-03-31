@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/bower/Materialize/dist/css/materialize.min.css"/>
     <script src="/bower/jquery/dist/jquery.min.js"></script>
     <script src="/bower/Materialize/bin/materialize.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_SCT4CEv-Y-GauSitNwXTrlHAKGuhUYw&callback=initMap"></script>
+
     <!-- <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic' rel='stylesheet'
            type='text/css'>-->
@@ -21,8 +23,8 @@
     <li><a href="#/paper/general">General</a></li>
     <li><a href="#/paper/abstracts">Abstracts</a></li>
     <li><a href="#/paper/full">Full Papers</a></li>
-    <li><a href="#/comingSoon">Posters</a></li>
-    <li><a href="#/comingSoon">Awards</a></li>
+    <li><a href="#/posters">Posters</a></li>
+    <li><a href="#/awards">Awards</a></li>
 </ul>
 <!--<ul id="dropdown2" class="dropdown-content">
     <li><a href="#/comingSoon">Event Schedule</a></li>
@@ -31,14 +33,14 @@
     <li><a href="#/comingSoon">Invited Speakers</a></li>
 </ul>-->
 <ul id="dropdown3" class="dropdown-content">
-    <li><a href="#/comingSoon">Exhibition</a></li>
-    <li><a href="#/comingSoon">Social Programs</a></li>
+    <li><a href="#/exhibition">Exhibition</a></li>
+    <li><a href="#/socialprograms">Social Programs</a></li>
 </ul>
 <ul id="dropdown4" class="dropdown-content">
-    <li><a href="#/comingSoon">Venue</a></li>
-    <li><a href="#/comingSoon">Accommodation</a></li>
-    <li><a href="#/comingSoon">Advertise with ICCB</a></li>
-    <li><a href="#/comingSoon">Major Sponsors</a></li>
+    <li><a href="#/venue">Venue</a></li>
+    <li><a href="#/accommodation">Accommodation</a></li>
+    <li><a href="#/ads">Advertise with ICCB</a></li>
+    <li><a href="#/sponsors">Major Sponsors</a></li>
 </ul>
 <nav>
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
@@ -72,8 +74,8 @@
                             <li><a href="#/paper/general">General</a></li>
                             <li><a href="#/paper/abstracts">Abstracts</a></li>
                             <li><a href="#/paper/full">Full Papers</a></li>
-                            <li><a href="#/comingSoon">Posters</a></li>
-                            <li><a href="#/comingSoon">Awards</a></li>
+                            <li><a href="#/posters">Posters</a></li>
+                            <li><a href="#/awards">Awards</a></li>
                         </ul>
                     </div>
                 </li>
@@ -82,16 +84,8 @@
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
                 <li>
-                    <a class="collapsible-header">Scientific Programs</a>
+                    <a href="#/sciPrograms">Scientific Programs</a>
 
-                    <div class="collapsible-body">
-                        <ul>
-                            <li><a href="#/comingSoon">Event Schedule</a></li>
-                            <li><a href="#/comingSoon">Technical Sessions</a></li>
-                            <li><a href="#/comingSoon">Mini Symposia</a></li>
-                            <li><a href="#/comingSoon">Invited Speakers</a></li>
-                        </ul>
-                    </div>
                 </li>
             </ul>
         </li>
@@ -102,8 +96,8 @@
 
                     <div class="collapsible-body">
                         <ul>
-                            <li><a href="#/comingSoon">Exhibition</a></li>
-                            <li><a href="#/comingSoon">Social Programs</a></li>
+                            <li><a href="#/exhibition">Exhibition</a></li>
+                            <li><a href="#/socialprograms">Social Programs</a></li>
                         </ul>
                     </div>
                 </li>
@@ -117,12 +111,10 @@
 
                     <div class="collapsible-body">
                         <ul>
-                            <li><a href="#/comingSoon">General Information</a></li>
-                            <li><a href="#/comingSoon">Venue</a></li>
-                            <li><a href="#/comingSoon">Accommodation</a></li>
-                            <li><a href="#/comingSoon">Important Dates</a></li>
-                            <li><a href="#/comingSoon">Advertise with ICCB</a></li>
-                            <li><a href="#/comingSoon">Major Sponsors</a></li>
+                            <li><a href="#/venue">Venue</a></li>
+                            <li><a href="#/accommodation">Accommodation</a></li>
+                            <li><a href="#/ads">Advertise with ICCB</a></li>
+                            <li><a href="#/sponsors">Major Sponsors</a></li>
                         </ul>
                     </div>
                 </li>
@@ -156,28 +148,59 @@
         <div class="row">
             <div class="col l6 s12">
                 <h5 class="white-text">Important Dates</h5>
-                <ul class="white-text">
-                    <li>Submission of abstracts</li>
-                    <li>Acceptance Notification</li>
-                    <li>Registration at normal rate</li>
-                    <li>Booking of Accomodation</li>
-                </ul>
+                <table style="margin: 0 !important;padding: 0 !important;color: white">
+                    <tr>
+                        <td>
+                            Submission of abstracts
+                        </td>
+                        <td>
+                            8/7/16
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Acceptance Notification
+                        </td>
+                        <td>
+                            15/7/16
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Registration at normal rate
+                        </td>
+                        <td>
+                            30/7/16
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Booking of Accomodation
+                        </td>
+                        <td>
+                            30/7/16
+                        </td>
+                    </tr>
+                </table>
             </div>
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Important Links</h5>
                 <ul>
                     <li><a class="grey-text text-lighten-3" href="#/comingSoon">Login</a></li>
                     <li><a class="grey-text text-lighten-3" href="#/register">Register</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#/comingSoon">Program Schedule</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#/sciPrograms">Scientific Programs</a></li>
                     <li><a class="grey-text text-lighten-3" href="#/contact">Contact Us</a></li>
+                    <li><a class="grey-text text-lighten-3" href="http://www.brsi.in">BRSI</a></li>
+                    <li><a class="grey-text text-lighten-3" href="http://www.vit.ac.in">VIT</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="footer-copyright">
+    <div class="footer-copyright" style="padding: 0!important;height: 50px !important;">
         <div class="container">
             © 2016 ICCB
-            <a class="grey-text text-lighten-4 right" href="http://vit.ac.in" target="_blank">VIT University</a>
+            <a class="grey-text text-lighten-4 right" href="http://www.vit.ac.in" target="_blank"><img src="/images/vit_logo_white.png" width="100"/></a>
+
         </div>
     </div>
 </footer>
