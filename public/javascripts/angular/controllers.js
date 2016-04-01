@@ -548,6 +548,24 @@ controllers.sciProg = function($scope){
                 'BAMB 7 Computational Biology/Software',
                 'BAMB 8 Bioinformatics in drug discovery'
             ]
+        },
+        {
+            "name":'Nano Biotechnology (NB)',
+            'courses':[
+                ''
+            ]
+        },
+        {
+            "name":'Nutraceuticals(NC)',
+            'courses':[
+                ''
+            ]
+        },
+        {
+            "name":'Marine Biotechnology (MaB)',
+            'courses':[
+                ''
+            ]
         }
     ];
 };
