@@ -31,13 +31,13 @@ controllers.register = function($scope){
         },
         {
             "cat" : "Full Delegates (BRSI Members)",
-            "fee1" : 4500,
+            "fee1" : 4000,
             "fee2": 5000
         },
         {
             "cat" : "Full Deledates (Non BRSI Members)	",
-            "fee1" : 5250,
-            "fee2": 5750
+            "fee1" : 5000,
+            "fee2": 6000
         },
         {
             "cat" : "Accompanying Person",
@@ -53,8 +53,8 @@ $scope.Over = [
     },
     {
         "cat" : "Full Deledates",
-        "fee1" : 115	,
-        "fee2": 140
+        "fee1" : 100	,
+        "fee2": 125
     },
     {
         "cat" : "Accompanying Person",
@@ -244,7 +244,7 @@ controllers.committees = function($scope){
             },
             {
                 "name":"Pandian, SK",
-                "institute":"Karaikudi"
+                "institute":"Alaggappa University,Karaikudi"
             },
             {
                 "name":"Pant, Deepak",
@@ -551,18 +551,6 @@ controllers.sciProg = function($scope){
         },
         {
             "name":'Nano Biotechnology (NB)',
-            'courses':[
-                ''
-            ]
-        },
-        {
-            "name":'Nutraceuticals(NC)',
-            'courses':[
-                ''
-            ]
-        },
-        {
-            "name":'Marine Biotechnology (MaB)',
             'courses':[
                 ''
             ]
