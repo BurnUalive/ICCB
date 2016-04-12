@@ -296,6 +296,9 @@ li .active {
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
 }
 @media only screen and (max-width: 992px) {
+    #main_2{
+        margin-top:2% !important;
+    }
     .links {
         display: none;
     }
@@ -309,7 +312,9 @@ li .active {
     }
 
 }
-
+.aboutVIT li{
+    list-style: circle;
+}
 /* Marquee */
 .marquee {
     width: 70%;
