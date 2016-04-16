@@ -3,9 +3,9 @@
  */
 window.onload = function(){
     var a = document.getElementsByTagName('iframe');
-    a.heigth = window.innerHeight+'px';
+    a[0].heigth = window.innerHeight+'px';
 };
 window.resize = function(){
     var a = document.getElementsByTagName('iframe');
-    a.heigth = window.innerHeight+'px';
+    a[0].heigth = window.innerHeight+'px';
 };
