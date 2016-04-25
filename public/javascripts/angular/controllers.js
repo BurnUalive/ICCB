@@ -537,7 +537,7 @@ controllers.sciProg = function($scope){
             ]
         },
         {
-            "name":'Basic and Applied Molecular Biology and Bioinfromatics (BAMB)',
+            "name":'Basic and Applied Molecular Biology and Bioinformatics (BAMB)',
             'courses':[
                 'BAMB 1 Metabolic pathways/Signal transduction/Metabolic engineering',
                 'BAMB 2 Molecular cloning /Recombinant DNA',
