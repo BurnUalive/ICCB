@@ -68,6 +68,9 @@ router.get('/ads',function(req,res){
 router.get('/sponsors',function(req,res){
     res.render('sponsors');
 });
+router.get('/speakers',function(req,res){
+    res.render('speakers');
+});
 /*
 router.post('/register', function (req, res) {
     let data = {

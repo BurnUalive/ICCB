@@ -75,6 +75,10 @@ app.config(function ($routeProvider) {
             templateUrl: '/sponsors',
             controller: 'sponsors'
         })
+        .when('/speakers', {
+            templateUrl: '/speakers',
+            controller: 'speakers'
+        })
         .otherwise({
             redirectTo: '/'
         });
