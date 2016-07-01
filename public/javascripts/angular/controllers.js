@@ -91,51 +91,63 @@ controllers.committees = function($scope){
         "committee":[
             {
                 "name":"Datta, Asis",
-                "institute":"National Institute of Plant Genomics Research, New Delhi"
+                "institute":"National Institute of Plant Genomics Research, New Delhi",
+                "img":"images/NSC/image1.png"
             },
             {
                 "name":"Gaikaiwari, Raghavendra",
-                "institute":"Hi-Tech Biosciences Ltd, Pune"
+                "institute":"Hi-Tech Biosciences Ltd, Pune",
+                "img":"images/NSC/image2.png"
             },
             {
                 "name":"Ghosh, Amit",
-                "institute":"National Institute of Cholera and, Enteric Diseases, Kolkata   "
+                "institute":"National Institute of Cholera and, Enteric Diseases, Kolkata   ",
+                "img":"images/NSC/image3.png"
             },
             {
                 "name":"Kumar, Rakesh",
-                "institute":"National Environmental Engineering Research Institute, Nagpur"
+                "institute":"National Environmental Engineering Research Institute, Nagpur",
+                "img":"images/NSC/image4.png"
             },
             {
                 "name":"Kumar, Sanjay",
-                "institute":"CSIR-Institute of Himalayan Bioresource Technology, Palampur"
+                "institute":"CSIR-Institute of Himalayan Bioresource Technology, Palampur",
+                "img":"images/NSC/image5.png"
             },
             {
                 "name":"Nautiyal, Chandra Shekhar",
-                "institute":"CSIR-National Botanical Research Institute, Lucknow"
+                "institute":"CSIR-National Botanical Research Institute, Lucknow",
+                "img":"images/NSC/image6.png"
             },
             {
                 "name":"Nuna, Sheel",
-                "institute":"QUT South Asia Office, New Delhi"
+                "institute":"QUT South Asia Office, New Delhi",
+                "img":"images/NSC/image7.png"
             },
             {
                 "name":"Padmanaban, G",
-                "institute":"Indian Institute of Science, Bangalore"
+                "institute":"Indian Institute of Science, Bangalore",
+                "img":"images/NSC/image8.png"
             },
             {
                 "name":"Palakhiwala, Piyush",
-                "institute":"Maps Enzymes Ltd, Ahmadabad"
+                "institute":"Maps Enzymes Ltd, Ahmadabad",
+                "img":"images/NSC/image9.png"
             },
             {
                 "name":"Sahoo, Dinabandhu",
-                "institute":"Institute of Bioresources and Sustainable Development, Imphal"
+                "institute":"Institute of Bioresources and Sustainable Development, Imphal",
+                "img":"images/NSC/image10.png"
             },
             {
                 "name":"Sangwan, Rajender S",
-                "institute":"Centre for Innovative and Applied Bioprocessing, Mohali"
+                "institute":"Centre for Innovative and Applied Bioprocessing, Mohali",
+                "img":"images/NSC/image11.png"
             },
             {
                 "name":"Yadav, JS",
-                "institute":"Indian Institute of Chemical Technology, Hyderabad"
+                "institute":"Indian Institute of Chemical Technology, Hyderabad",
+                "img":"images/NSC/image12.png"
             }
         ]
     };
@@ -144,175 +156,218 @@ controllers.committees = function($scope){
         "committee":[
             {
                 "name":"Agarwal, Avinash Kumar",
-                "institute":"National Institute of Plant Genomics Research, New Delhi"
+                "institute":"National Institute of Plant Genomics Research, New Delhi",
+                "img":"images/NOC/image1.png"
             },
             {
                 "name":"Agarwal, Sunil",
-                "institute":"Department of Science and Technology, GoI, New Delhi"
+                "institute":"Department of Science and Technology, GoI, New Delhi",
+                "img":"images/NOC/image2.png"
             },
             {
                 "name":"Agarwal, Vivek",
-                "institute":"CDC India, Jaipur"
+                "institute":"CDC India, Jaipur",
+                "img":"images/NOC/image3.png"
             },
             {
                 "name":"Agasar, Dayanand",
-                "institute":"Gulbarga University, Gulbarga"
+                "institute":"Gulbarga University, Gulbarga",
+                "img":"images/NOC/image4.png"
             },
             {
                 "name":"Banerjee, Moinak",
-                "institute":"Rajeev Gandhi Centre for Biotechnology, Trivandrum"
+                "institute":"Rajeev Gandhi Centre for Biotechnology, Trivandrum",
+                "img":"images/NOC/image5.png"
             },
             {
                 "name":"Baskar, Gurunathan",
-                "institute":"St Joseph’s College, Chennai"
+                "institute":"St Joseph’s College, Chennai",
+                "img":"images/NOC/image6.png"
             },
             {
                 "name":"Bhaskar, Thallada",
-                "institute":"CSIR-Indian Institute of Petroleum, Dehradun"
+                "institute":"CSIR-Indian Institute of Petroleum, Dehradun",
+                "img":"images/NOC/image7.png"
             },
             {
                 "name":"Binod, P",
-                "institute":"CSIR-National Institute for Interdisciplinary S&T, Trivandrum"
+                "institute":"CSIR-National Institute for Interdisciplinary S&T, Trivandrum",
+                "img":"images/NOC/image8.png"
             },
             {
                 "name":"Chadha, Bhupinder S ",
-                "institute":"Guru Nanak Dev University, Amritsar"
+                "institute":"Guru Nanak Dev University, Amritsar",
+                "img":"images/NOC/image9.png"
             },
             {
                 "name":"Chanakya, Visvanatha",
-                "institute":"Gandhi Institute of Technology and Management, Visakhapatnam"
+                "institute":"Gandhi Institute of Technology and Management, Visakhapatnam",
+                "img":"images/NOC/image10.png"
             },
             {
                 "name":"De, Sudipta",
-                "institute":"Jadavpur University, Kolkata"
+                "institute":"Jadavpur University, Kolkata",
+                "img":"images/NOC/image11.png"
             },
             {
                 "name":"Dharmpalan, Biju",
-                "institute":"MACFAST, Thiruvalla"
+                "institute":"MACFAST, Thiruvalla",
+                "img":"images/NOC/image12.png"
             },
             {
                 "name":"Dubey, Suresh Kumar",
-                "institute":"Banaras Hindu University, Varanasi"
+                "institute":"Banaras Hindu University, Varanasi",
+                "img":"images/NOC/image13.png"
             },
             {
                 "name":"Garg, Vinod K",
-                "institute":"Central University of Punjab, Bhatinda"
+                "institute":"Central University of Punjab, Bhatinda",
+                "img":"images/NOC/image14.png"
             },
             {
                 "name":"Govindwar, Sanjay P ",
-                "institute":"Shivaji University, Kolhapur"
+                "institute":"Shivaji University, Kolhapur",
+                "img":"images/NOC/image15.png"
             },
             {
                 "name":"Kataki, Rupam",
-                "institute":"Tezpur University, Tezpur"
+                "institute":"Tezpur University, Tezpur",
+                "img":"images/NOC/image16.png"
             },
             {
                 "name":"Khare, Sunil K",
-                "institute":"Indian Institute of Technology, New Delhi"
+                "institute":"Indian Institute of Technology, New Delhi",
+                "img":"images/NOC/image17.png"
             },
             {
                 "name":"Kuhad, Ramesh C",
-                "institute":"Central University of Haryana, Mahendergarh"
+                "institute":"Central University of Haryana, Mahendergarh",
+                "img":"images/NOC/image18.png"
             },
             {
                 "name":"Kumar, Sunil",
-                "institute":"CSIR-National Environmental Eng Research Institute, Nagpur"
+                "institute":"CSIR-National Environmental Eng Research Institute, Nagpur",
+                "img":"images/NOC/image19.png"
             },
             {
                 "name":"Lele, Smita",
-                "institute":"Institute of Chemical Technology, Mumbai"
+                "institute":"Institute of Chemical Technology, Mumbai",
+                "img":"images/NOC/image20.png"
             },
             {
                 "name":"Mohan, S Venkata",
-                "institute":"CSIR-Indian Institute of Chemical Technology, Hyderabad"
+                "institute":"CSIR-Indian Institute of Chemical Technology, Hyderabad",
+                "img":"images/NOC/image21.png"
             },
             {
                 "name":"Mondal, Keshab C",
-                "institute":"Vidyasagar University, Midnapore"
+                "institute":"Vidyasagar University, Midnapore",
+                "img":"images/NOC/image22.png"
             },
             {
                 "name":"Nampoothiri, Madhavan K",
-                "institute":"CSIR-National Institute for Interdisciplinary S&T, Trivandrum"
+                "institute":"CSIR-National Institute for Interdisciplinary S&T, Trivandrum",
+                "img":"images/NOC/image23.png"
             },
             {
                 "name":"Nawani, Neelu",
-                "institute":"Dr DY Patil Institute of Biotechnology & Bioinformatics, Pune"
+                "institute":"Dr DY Patil Institute of Biotechnology & Bioinformatics, Pune",
+                "img":"images/NOC/image24.png"
             },
             {
                 "name":"Pandey, DM",
-                "institute":"BITS, Mesra, Ranch"
+                "institute":"BITS, Mesra, Ranch",
+                "img":"images/NOC/image25.png"
             },
             {
                 "name":"Pandian, SK",
-                "institute":"Alaggappa University,Karaikudi"
+                "institute":"Alaggappa University,Karaikudi",
+                "img":"images/NOC/image26.png"
             },
             {
                 "name":"Pant, Deepak",
-                "institute":"Central University of Himachal Pradesh, Dharamshala"
+                "institute":"Central University of Himachal Pradesh, Dharamshala",
+                "img":"images/NOC/image27.png"
             },
             {
                 "name":"Prasad, RBN",
-                "institute":"CSIR-Indian Institute of Chemical Technology, Hyderabad"
+                "institute":"CSIR-Indian Institute of Chemical Technology, Hyderabad",
+                "img":"images/NOC/image28.png"
             },
             {
                 "name":"Praveenkumar, Ramanujam",
-                "institute":"Arunai Engineering College, Thiruvannamalai"
+                "institute":"Arunai Engineering College, Thiruvannamalai",
+                "img":"images/NOC/image29.png"
             },
             {
                 "name":"Ramachandran, KB",
-                "institute":"Indian Institute of Technology, Chennai"
+                "institute":"Indian Institute of Technology, Chennai",
+                "img":"images/NOC/image30.png"
             },
             {
                 "name":"Rangarajan, PN",
-                "institute":"Indian Institute of Science, Bangalore"
+                "institute":"Indian Institute of Science, Bangalore",
+                "img":"images/NOC/image31.png"
             },
             {
                 "name":"Sangwan, Rajender S",
-                "institute":"Centre for Innovative and Applied Bioprocessing, Mohali"
+                "institute":"Centre for Innovative and Applied Bioprocessing, Mohali",
+                "img":"images/NOC/image32.png"
             },
             {
                 "name":"Sankaran, Krishnan",
-                "institute":"Anna University, Chennai"
+                "institute":"Anna University, Chennai",
+                "img":"images/NOC/image33.png"
             },
             {
                 "name":"Sarangan, Swaroop",
-                "institute":"Reliance Industries Ltd, Mumbai"
+                "institute":"Reliance Industries Ltd, Mumbai",
+                "img":"images/NOC/image.png"
             },
             {
                 "name":"Satyanarayana, Tulsi",
-                "institute":"University of Delhi, New Delhi"
+                "institute":"University of Delhi, New Delhi",
+                "img":"images/NOC/image34.png"
             },
             {
                 "name":"Singh, Durg V ",
-                "institute":"Institute of Life Sciences, Bhubaneswar"
+                "institute":"Institute of Life Sciences, Bhubaneswar",
+                "img":"images/NOC/image35.png"
             },
             {
                 "name":"Singh, Ram S",
-                "institute":"Punjabi University, Patiala"
+                "institute":"Punjabi University, Patiala",
+                "img":"images/NOC/image36.png"
             },
             {
                 "name":"Srivastava, Sangeeta",
-                "institute":"Godawari Biorefineries Ltd, Mumbai"
+                "institute":"Godawari Biorefineries Ltd, Mumbai",
+                "img":"images/NOC/image.png"
             },
             {
                 "name":"Sukumaran, Rajeev K",
-                "institute":"CSIR-National Institute for Interdisciplinary S&T, Trivandrum"
+                "institute":"CSIR-National Institute for Interdisciplinary S&T, Trivandrum",
+                "img":"images/NOC/image37.png"
             },
             {
                 "name":"Tamang, Jyoti P ",
-                "institute":"Sikkim University, Gangtok"
+                "institute":"Sikkim University, Gangtok",
+                "img":"images/NOC/image38.png"
             },
             {
                 "name":"Thakur, Indu S",
-                "institute":"Jawaharlal Nehru University, New Delhi"
+                "institute":"Jawaharlal Nehru University, New Delhi",
+                "img":"images/NOC/image39.png"
             },
             {
                 "name":"Upadhyay, Siddha N ",
-                "institute":"Banaras Hindu University, Varanasi"
+                "institute":"Banaras Hindu University, Varanasi",
+                "img":"images/NOC/image40.png"
             },
             {
                 "name":"Wangikar, Pramod K",
-                "institute":"Indian Institute of Technology, Mumbai"
+                "institute":"Indian Institute of Technology, Mumbai",
+                "img":"images/NOC/image41.png"
             }
         ]
     };
@@ -321,107 +376,129 @@ controllers.committees = function($scope){
         "committee":[
             {
                 "name":"Bhoopathy, Raj",
-                "institute":"University of Nicholls, USA"
+                "institute":"University of Nicholls, USA",
+                "img":"images/IAC/image1.jpeg"
             },
             {
                 "name":"Castro, Guillermo R",
-                "institute":"Universidad Nacional de La Plata, La Plata, Argentina"
-            },
-            {
-                "name":"Chang, In Seop",
-                "institute":"Gwangju Institute of Science and Technology, Gwangju, South Korea"
+                "institute":"Universidad Nacional de La Plata, La Plata, Argentina",
+                "img":"images/IAC/image2.jpeg"
             },
             {
                 "name":"Chang, Jo Shu",
-                "institute":"National Cheng Kung University, Taiwan"
+                "institute":"National Cheng Kung University, Taiwan",
+                "img":"images/IAC/image3.jpeg"
             },
+
             {
                 "name":"Dosoretz, Carlos",
-                "institute":"Technicon, Israel Institute of Technology, Haifa, Israel"
+                "institute":"Technicon, Israel Institute of Technology, Haifa, Israel",
+                "img":"images/IAC/image4.jpeg"
             },
             {
                 "name":"Ferreira-Dias, Suzana",
-                "institute":"Technical University of Lisbon, Lisbon, Portugal"
+                "institute":"Technical University of Lisbon, Lisbon, Portugal",
+                "img":"images/IAC/image5.jpeg"
             },
             {
                 "name":"Gnansonou, Edgard",
-                "institute":"École Polytechnique Fédérale de Lausanne (EPFL), Lausanne, Switzerland"
+                "institute":"École Polytechnique Fédérale de Lausanne (EPFL), Lausanne, Switzerland",
+                "img":"images/IAC/image6.jpeg"
             },
             {
                 "name":"Janecek, Stefan",
-                "institute":"Institute of Molecular Biology, Slovak Academy of Sciences, Bratislava, Slovakia"
+                "institute":"Institute of Molecular Biology, Slovak Academy of Sciences, Bratislava, Slovakia",
+                "img":"images/IAC/image7.jpeg"
             },
             {
                 "name":"Kaul, Sunil C ",
-                "institute":"National Institute of Advanced Industrial Science & Technology, Japan"
+                "institute":"National Institute of Advanced Industrial Science & Technology, Japan",
+                "img":"images/IAC/image8.jpeg"
             },
             {
                 "name":"Khanal, Samir ",
-                "institute":"University of Hawaii at Mãnoa, Honolulu, Hawaii, USA"
+                "institute":"University of Hawaii at Mãnoa, Honolulu, Hawaii, USA",
+                "img":"images/IAC/image9.jpeg"
             },
             {
                 "name":"Kondo, Akihiko",
-                "institute":"Kobe University, Kobe, Japan"
+                "institute":"Kobe University, Kobe, Japan",
+                "img":"images/IAC/image10.jpeg"
             },
             {
                 "name":"Larroche, Christian",
-                "institute":"Universite Blaise Pascal, Clermont Ferrand, France"
+                "institute":"Universite Blaise Pascal, Clermont Ferrand, France",
+                "img":"images/IAC/image11.jpeg"
             },
             {
                 "name":"Lee, Duu Jong",
-                "institute":"National Taiwan University, Taipei, Taiwan"
+                "institute":"National Taiwan University, Taipei, Taiwan",
+                "img":"images/IAC/image12.jpeg"
             },
             {
                 "name":"Lee, Keat Teong ",
-                "institute":"Universiti Sains Malaysia, Pulau Pinang, Malaysia"
+                "institute":"Universiti Sains Malaysia, Pulau Pinang, Malaysia",
+                "img":"images/IAC/image13.jpeg"
             },
             {
                 "name":"Ngo, Hao Huu  ",
-                "institute":"University of Technology, Sydney, Australia"
+                "institute":"University of Technology, Sydney, Australia",
+                "img":"images/IAC/image14.jpeg"
             },
             {
                 "name":"Nigam, Poonam ",
-                "institute":"University of Ulster, Coleraine, Co. Londonderry, Northern Ireland, UK"
+                "institute":"University of Ulster, Coleraine, Co. Londonderry, Northern Ireland, UK",
+                "img":"images/IAC/image15.jpeg"
             },
             {
                 "name":"Papamichael, Emmanuel M ",
-                "institute":"University of Ioannina, Greece"
+                "institute":"University of Ioannina, Greece",
+                "img":"images/IAC/image.jpeg"
             },
             {
                 "name":"Park, Jong Moon ",
-                "institute":"Pohang University of Science and Technology, Pohang, Gyeongbuk, South Korea"
+                "institute":"Pohang University of Science and Technology, Pohang, Gyeongbuk, South Korea",
+                "img":"images/IAC/image16.jpeg"
             },
             {
                 "name":"Ruan, Roger ",
-                "institute":"University of Minnesota, USA"
+                "institute":"University of Minnesota, USA",
+                "img":"images/IAC/image17.jpeg"
             },
             {
                 "name":"Sanroman, Maria Angeles",
-                "institute":"Universidad de Vigo, Vigo, Spain"
+                "institute":"Universidad de Vigo, Vigo, Spain",
+                "img":"images/IAC/image18.jpeg"
             },
             {
                 "name":"Saucedo-Castaneda, Gerardo",
-                "institute":"Universidad Autónoma Metropolitana-Iztapalapa, México"
+                "institute":"Universidad Autónoma Metropolitana-Iztapalapa, México",
+                "img":"images/IAC/image19.jpeg"
             },
             {
                 "name":"Soccol, Carlos Ricardo",
-                "institute":"Federal University of Parana, Curitiba, Brazil"
+                "institute":"Federal University of Parana, Curitiba, Brazil",
+                "img":"images/IAC/image.jpeg"
             },
             {
                 "name":"Tahezadeh, Mohammad",
-                "institute":"University of Borås, Borås, Sweden"
+                "institute":"University of Borås, Borås, Sweden",
+                "img":"images/IAC/image20.jpeg"
             },
             {
                 "name":"Tyagi, Rajeshwar Dayal",
-                "institute":"INRS, Quebec, Canada"
+                "institute":"INRS, Quebec, Canada",
+                "img":"images/IAC/image21.jpeg"
             },
             {
                 "name":"Visvanathan, C ",
-                "institute":"Asian Institute of Technology, Klongluang, Pathumthani, Thailand"
+                "institute":"Asian Institute of Technology, Klongluang, Pathumthani, Thailand",
+                "img":"images/IAC/image22.jpeg"
             },
             {
                 "name":"Wong, Jonathan",
-                "institute":"Hong Kong Baptist University, Hong Kong"
+                "institute":"Hong Kong Baptist University, Hong Kong",
+                "img":"images/IAC/image23.jpeg"
             }
         ]
     };
@@ -430,43 +507,53 @@ controllers.committees = function($scope){
         "committee":[
             {
                 "name":"Dr. M.Rasool",
-                "institute":"Organizing Secretary"
+                "institute":"Organizing Secretary",
+                "img":"/images/LWC/image1.png"
             },
             {
                 "name":"Dr. K.Ramanathan",
-                "institute":"Organizing Secretary"
+                "institute":"Organizing Secretary",
+                "img":"/images/LWC/image2.png"
             },
             {
                 "name":"Dr. M.Arabi Saleh",
-                "institute":"Organizing Secretary"
+                "institute":"Organizing Secretary",
+                "img":"/images/LWC/image3.png"
             },
             {
                 "name":"Dr.  Arnold Ememerson",
-                "institute":"Organizing Secretary"
+                "institute":"Organizing Secretary",
+                "img":"/images/LWC/image4.png"
             },
             {
                 "name":"Dr. V. Mohana Srinivasan",
-                "institute":"Organizing Secretary"
+                "institute":"Organizing Secretary",
+                "img":"/images/LWC/image5.png"
             },
             {
                 "name":"Dr. A. Sivakumar",
-                "institute":"Joint Secretary"
+                "institute":"Joint Secretary",
+                "img":"/images/LWC/image6.png"
             },
             {
                 "name":"Dr. Febin Prabhudass",
-                "institute":"Joint Secretary"
+                "institute":"Joint Secretary",
+                "img":"/images/LWC/image7.png"
             },
             {
                 "name":"Dr. S.Vino",
-                "institute":"Joint Secretary"
+                "institute":"Joint Secretary",
+                "img":"/images/LWC/image8.png"
             },
             {
                 "name":"Dr.K.Suthindiran",
-                "institute":"Joint Secretary"
+                "institute":"Joint Secretary",
+                "img":"/images/LWC/image9.png"
             },
             {
                 "name":"Dr. Jabaz Osborne",
-                "institute":"Joint Secretary"
+                "institute":"Joint Secretary",
+                "img":"/images/LWC/image10.png"
             }
         ]
     };
