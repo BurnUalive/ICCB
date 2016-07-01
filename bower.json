@@ -18,6 +18,6 @@
     "Materialize": "materialize#~0.97.5"
   },
   "resolutions": {
-    "angular": "1.4.10"
+    "angular": "^1.4.10"
   }
 }
