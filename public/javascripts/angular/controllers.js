@@ -411,7 +411,7 @@ controllers.committees = function($scope){
                 "img":"images/IAC/image7.jpeg"
             },
             {
-                "name":"Kaul, Sunil C ",
+                "name":"Kaul, Sunil ",
                 "institute":"National Institute of Advanced Industrial Science & Technology, Japan",
                 "img":"images/IAC/image8.jpeg"
             },
@@ -506,42 +506,42 @@ controllers.committees = function($scope){
         "name":"Local Working Committee",
         "committee":[
             {
-                "name":"Dr. M.Rasool",
+                "name":"Dr.M.Rasool",
                 "institute":"Organizing Secretary",
                 "img":"/images/LWC/image1.png"
             },
             {
-                "name":"Dr. K.Ramanathan",
+                "name":"Dr.K.Ramanathan",
                 "institute":"Organizing Secretary",
                 "img":"/images/LWC/image2.png"
             },
             {
-                "name":"Dr. M.Arabi Saleh",
+                "name":"Dr.M.Arabi Saleh",
                 "institute":"Organizing Secretary",
                 "img":"/images/LWC/image3.png"
             },
             {
-                "name":"Dr.  Arnold Ememerson",
+                "name":"Dr.Arnold Ememerson",
                 "institute":"Organizing Secretary",
                 "img":"/images/LWC/image4.png"
             },
             {
-                "name":"Dr. V. Mohana Srinivasan",
+                "name":"Dr.V. Mohana Srinivasan",
                 "institute":"Organizing Secretary",
                 "img":"/images/LWC/image5.png"
             },
             {
-                "name":"Dr. A. Sivakumar",
+                "name":"Dr.A. Sivakumar",
                 "institute":"Joint Secretary",
                 "img":"/images/LWC/image6.png"
             },
             {
-                "name":"Dr. Febin Prabhudass",
+                "name":"Dr.Febin Prabhudass",
                 "institute":"Joint Secretary",
                 "img":"/images/LWC/image7.png"
             },
             {
-                "name":"Dr. S.Vino",
+                "name":"Dr.S.Vino",
                 "institute":"Joint Secretary",
                 "img":"/images/LWC/image8.png"
             },
@@ -551,7 +551,7 @@ controllers.committees = function($scope){
                 "img":"/images/LWC/image9.png"
             },
             {
-                "name":"Dr. Jabaz Osborne",
+                "name":"Dr.Jabaz Osborne",
                 "institute":"Joint Secretary",
                 "img":"/images/LWC/image10.png"
             }
@@ -1010,7 +1010,7 @@ controllers.speakers = function($scope){
         },{
             'name':"Renu Wadhwa",
             'img':"/images/Speakers/image48.png",
-            'place':"Advanced Institute of Science and Technology, Tsukuba, Japan",
+            'place':"National Institute of Advanced Industrial Science and Technology(AIST)), Tsukuba, Japan",
             'topic':"Stress chaperone mortalin - Discovery to drug target"
         },{
             'name':"Roger Ruan",
@@ -1035,7 +1035,7 @@ controllers.speakers = function($scope){
         },{
             'name':"Sunil Kaul",
             'img':"/images/Speakers/image52.png",
-            'place':"Advanced Institute of Science and Technology, Tsukuba, Japan",
+            'place':"National Institute of Advanced Industrial Science and Technology(AIST)), Tsukuba, Japan",
             'topic':"Active ingredients enriched ashwagandha leaves: Benefits, bioactives, biology and biotechnology"
         },{
             'name':"Sudipta De",

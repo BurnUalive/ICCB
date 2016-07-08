@@ -316,17 +316,15 @@
                     </h3>
                 </div>
                 <div class="row">
-                    <table>
-                        <tr ng-repeat="a in arr.committee">
-                            <td>
-                                <img src="{{a.img}}" class="col m4 xs4" />
-                                {{a.name}}
-                            </td>
-                            <td>
-                                {{a.institute}}
-                            </td>
-                        </tr>
-                    </table>
+                    <ul>
+                        <li ng-repeat="a in arr.committee" class="col m3 xs12" style="width: 200px; height: 200px;text-align:center;margin: 2%; padding: 2%;font-size: 70%;">
+                            <img src="{{a.img}}" class="col m12" style="max-width: 150px; max-height: 150px; border-radius: 360px"  />
+                            <br/>
+                            {{a.name}}
+                            <br/>
+                            {{a.institute}}
+                        </li>
+                    </ul>
 
                 </div>
             </div>
