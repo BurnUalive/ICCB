@@ -506,52 +506,52 @@ controllers.committees = function($scope){
         "name":"Local Working Committee",
         "committee":[
             {
-                "name":"Dr.M.Rasool",
+                "name":"Dr. M.Rasool",
                 "institute":"Organizing Secretary",
                 "img":"/images/LWC/image1.png"
             },
             {
-                "name":"Dr.K.Ramanathan",
+                "name":"Dr. K.Ramanathan",
                 "institute":"Organizing Secretary",
                 "img":"/images/LWC/image2.png"
             },
             {
-                "name":"Dr.M.Arabi Saleh",
+                "name":"Dr. M.Arabi Saleh",
                 "institute":"Organizing Secretary",
                 "img":"/images/LWC/image3.png"
             },
             {
-                "name":"Dr.Arnold Ememerson",
+                "name":"Dr. Arnold Ememerson",
                 "institute":"Organizing Secretary",
                 "img":"/images/LWC/image4.png"
             },
             {
-                "name":"Dr.V. Mohana Srinivasan",
+                "name":"Dr. V. Mohana Srinivasan",
                 "institute":"Organizing Secretary",
                 "img":"/images/LWC/image5.png"
             },
             {
-                "name":"Dr.A. Sivakumar",
+                "name":"Dr. A. Sivakumar",
                 "institute":"Joint Secretary",
                 "img":"/images/LWC/image6.png"
             },
             {
-                "name":"Dr.Febin Prabhudass",
+                "name":"Dr. Febin Prabhudass",
                 "institute":"Joint Secretary",
                 "img":"/images/LWC/image7.png"
             },
             {
-                "name":"Dr.S.Vino",
+                "name":"Dr. S.Vino",
                 "institute":"Joint Secretary",
                 "img":"/images/LWC/image8.png"
             },
             {
-                "name":"Dr.K.Suthindiran",
+                "name":"Dr. K.Suthindiran",
                 "institute":"Joint Secretary",
                 "img":"/images/LWC/image9.png"
             },
             {
-                "name":"Dr.Jabaz Osborne",
+                "name":"Dr. Jabaz Osborne",
                 "institute":"Joint Secretary",
                 "img":"/images/LWC/image10.png"
             }
