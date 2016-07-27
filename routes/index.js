@@ -93,7 +93,7 @@ router.post('/login', function (req, res) {
             }
         }else{
             console.log('bad username');
-            res.redirect('/userLogin')
+            res.send("Bad username please recheck the fields. <a href='/userLogin'>Back</a>'");
         }
     };
     mongoUsers.fetch(credentials,db, onFetch);
@@ -170,6 +170,7 @@ router.post('/register', function (req, res) {
         }
         else{
             console.log('no data');
+            res.send("Bad data please recheck the fields. <a href='/userLogin'>Back</a>'");
         }
     };
     mongoUsers.getCount({},db, onGetCount);
@@ -228,6 +229,7 @@ router.post('/registerAdmin', function (req, res) {
         }
         else{
             console.log('no data');
+            res.send("Bad data please recheck the fields. <a href='/userLogin'>Back</a>'");
         }
     };
     mongoUsers.getCount({},db, onGetCount);
@@ -269,7 +271,7 @@ router.post('/upload',function (req, res){
         if (err) {
             console.log(req.file);
             console.log(err);
-            return;
+            res.status(500).send('Server Error');
         }
         else
         {
