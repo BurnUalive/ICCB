@@ -134,6 +134,8 @@ router.post('/register', function (req, res) {
 
             if (req.body.confirm_password === req.body.password)
             {
+                var saltRounds = 10;
+                var salt = bcrypt.genSaltSync(saltRounds);
                 var newUser = record;
                 newUser._id = req.body.email;
                 newUser.fullname = req.body.fullname;
@@ -141,7 +143,7 @@ router.post('/register', function (req, res) {
                 newUser.dob = new Date();
                 newUser.acc_no = parseInt(number) + 1;
                 console.log(req.body);
-                newUser.password_hash = bcrypt.hashSync(req.body.password);
+                newUser.password_hash = bcrypt.hashSync(req.body.password,salt);
                 newUser.abstract = '';
                 newUser.admin = false;
                 var onInsert = function (err, docs)
@@ -190,6 +192,8 @@ router.post('/registerAdmin', function (req, res) {
 
             if (req.body.confirm_password === req.body.password)
             {
+                var saltRounds = 10;
+                var salt = bcrypt.genSaltSync(saltRounds);
                 var newUser = record;
                 newUser._id = req.body.email;
                 newUser.fullname = req.body.fullname;
@@ -197,7 +201,7 @@ router.post('/registerAdmin', function (req, res) {
                 newUser.dob = new Date();
                 newUser.acc_no = parseInt(number) + 1;
                 console.log(req.body);
-                newUser.password_hash = bcrypt.hashSync(req.body.password);
+                newUser.password_hash = bcrypt.hashSync(req.body.password,salt);
                 newUser.abstract = '';
                 newUser.admin = true;
                 var onInsert = function (err, docs)
