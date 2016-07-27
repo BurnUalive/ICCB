@@ -23,7 +23,7 @@ var record = {
 };
 try
 {
-    bcrypt = require('bcryptjs');
+    bcrypt = require('bcrypt');
 }
 catch (err)
 {
