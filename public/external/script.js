@@ -6,7 +6,7 @@ window.onload = function(){
     var a = document.getElementsByTagName('iframe');
     console.log(a);
     console.log(a[0]);
-    a[0].heigth = window.innerHeight+'px';
+    a[0].heigth = '677px';
 };
 window.resize = function(){
     console.log(window.innerHeight+'px');

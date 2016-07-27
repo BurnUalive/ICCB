@@ -249,6 +249,7 @@ router.get('/comingSoon', function (req, res) {
     res.render('comingSoon');
 });
 router.get('/reg', function (req, res) {
+    res.render('reg');
 });
 router.get('/contact', function (req, res) {
     res.render('contact');
