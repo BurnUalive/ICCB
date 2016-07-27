@@ -26,7 +26,7 @@ router.get('/', function(req, res, next) {
     }
 
 });
-router.post('/sale',function(req,res){
+router.get('/sale',function(req,res){
     if (req.signedCookies.name) {
         var db = req.db;
         var name = req.body.fullname;
