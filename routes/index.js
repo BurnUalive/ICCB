@@ -150,7 +150,7 @@ router.post('/register', function (req, res) {
                 {
                     if (err)
                     {
-                        console.log(err.message);
+                        console.log(err);
                         res.render('register', {response: "User Already Exists"});
                     }
                     else
@@ -249,7 +249,6 @@ router.get('/comingSoon', function (req, res) {
     res.render('comingSoon');
 });
 router.get('/reg', function (req, res) {
-    res.render('reg');
 });
 router.get('/contact', function (req, res) {
     res.render('contact');
@@ -293,7 +292,7 @@ router.post('/upload',function (req, res){
                                 fs.rename(syspath, 'public/docs/' + user.abstract + '.doc', function (err) {
                                     if (err) {
                                         // console.log('rename error');
-                                        //console.log(err);
+                                        console.log(err);
                                     }
                                 });
                             });
