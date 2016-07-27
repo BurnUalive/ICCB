@@ -20,7 +20,7 @@ app.config(function ($routeProvider) {
             controller: 'contact'
         })
         .when('/register', {
-            templateUrl: '/register',
+            templateUrl: '/reg',
             controller: 'register'
         })
         .when('/paper/general', {

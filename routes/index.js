@@ -248,7 +248,7 @@ router.get('/invite', function (req, res) {
 router.get('/comingSoon', function (req, res) {
     res.render('comingSoon');
 });
-router.get('/register', authenticated, function (req, res) {
+router.get('/reg', function (req, res) {
     res.render('reg');
 });
 router.get('/contact', function (req, res) {
