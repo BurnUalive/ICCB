@@ -1,4 +1,41 @@
+<input type="hidden" value="<%if(user){%><%= user.admin %><%}else{}%>" id="test">
 
+<%if(user.admin == true){%>
+
+<div class="container" ng-init="setup()">
+    <div class="row">
+
+        <h4>
+            Get All Abstracts
+        </h4>
+        <button class="btn" ng-click="setup()">Update</button>
+        <input type="text" ng-model="query" placeholder="Search">
+        <ul class="collection">
+            <li class="collection-item" ng-repeat="user in users|filter:query">
+                <div ng-if="user.admin!=true">
+                    {{user.fullname}}
+                    <br>
+                    {{user.institution}}
+                    <br>
+                    {{user._id}}
+                    <br>
+                    <form method="get" action="/getAbs">
+                        <input type="hidden" name="abstract" value="{{user.abstract}}">
+                        <input class="btn" type="submit" value="get abstract">
+                    </form>
+
+                </div>
+            </li>
+        </ul>
+        <div align="center">
+            <a class="waves-effect waves-light btn" href="/users/logout">Logout</a>
+        </div>
+    </div>
+</div>
+
+
+
+<%}else{%>
 <div class="container" style="text-align:center" ng-init="setup()">
    <div class="row">
        <h4>
@@ -25,7 +62,7 @@
         </div>
 </div>
 
-
+<%}%>
 <script type="text/javascript">
     window.onload = function(){
         if(window.location.href.indexOf("#") == -1){

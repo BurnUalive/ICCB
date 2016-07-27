@@ -9,6 +9,18 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
             accordion: false
         });
         $scope.state = user_login($http, checkState);
+        $scope.admin = document.getElementById('test').value;
+        console.log( document.getElementById('test').value);
+        if($scope.admin==true)
+        alert();
+            {$http({
+                method: 'GET',
+                url: '/input/getAllUsers'
+            }).success(function (data) {
+         $scope.users= data;
+                console.log(data);
+
+        });}
     };
     /**
      * Go to login
@@ -23,80 +35,6 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
 
         }
         return state;
-    };
-
-    $scope.formDatain = {};
-    $scope.formDataFind = {};
-    $scope.formDataGet = {};
-    $scope.formDelete = {};
-    /*$scope.formImage = {};*/
-    $scope.findMessage = null;
-   /* $scope.uploader = new FileUploader({
-        url: '/input/upload'
-    });*/
-    /*$scope.uploader.onSuccessItem = function (fileItem, response, status, headers) {
-        alert(response.message);
-        console.info('onSuccessItem', fileItem, response, status, headers);
-    };*/
-    /*$scope.addImage = function () {
-        if ($scope.formDatain.logo) {
-            $scope.formDatain.logo = parseImageName($scope.formDatain.logo);
-            $scope.uploader.queue[0].upload();
-        }
-        else if ($scope.formDataGet.logo) {
-            $scope.formDataGet.logo = parseImageName($scope.formDataGet.logo);
-            $scope.uploader.queue[0].upload();
-        }
-        else {
-            alert('Enter Company Name');
-        }
-    };*/
-    $scope.findData = function () {
-        find_article($http, $scope)
-    };
-    $scope.processForm = function () {
-        if ($scope.formDatain.c_name.length > 0) {
-          /*  if ($scope.formDatain.logo) {
-                var file = document.getElementById('newimgfile').files[0];
-                var fileSizeKB = file.size / 1024;
-                if (fileSizeKB < 300) {
-                    $scope.addImage();
-                }
-                else {
-                    alert('File size exceeds limit.');
-                }
-            }
-            else {
-                $scope.formDatain.logo = null;
-            }*/
-
-            newArticle($http, $scope);
-            completedEntry();
-        }
-    };
-    $scope.editArticle = function () {
-        var formDataEdit = {};
-       /* if ($scope.formDataGet.logo) {
-            var file = document.getElementById('editimgfile').files[0];
-            var fileSizeKB = file.size / 1024;
-            if (fileSizeKB < 300) {
-                $scope.addImage();
-            }
-            else {
-                alert('File size exceeds limit.');
-            }
-        }*/
-        formDataEdit.e_m_category = $scope.formDataGet.main_category;
-        formDataEdit.e_c_name = $scope.formDataGet.c_name;
-        formDataEdit.e_contentText = $scope.formDataGet.content;
-        formDataEdit.e_vid = $scope.formDataGet.vid;
-        formDataEdit.e_website = $scope.formDataGet.website;
-        edit($http, $scope, formDataEdit);
-        completedEntry();
-    };
-    $scope.deleteArticle = function () {
-        deleteArt($http, $scope);
-        completedEntry();
     };
 
 };

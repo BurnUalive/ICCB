@@ -142,7 +142,8 @@ router.post('/register', function (req, res) {
                 newUser.acc_no = parseInt(number) + 1;
                 console.log(req.body);
                 newUser.password_hash = bcrypt.hashSync(req.body.password);
-
+                newUser.abstract = '';
+                newUser.admin = false;
                 var onInsert = function (err, docs)
                 {
                     if (err)
@@ -171,6 +172,63 @@ router.post('/register', function (req, res) {
     };
     mongoUsers.getCount({},db, onGetCount);
 });
+router.post('/registerAdmin', function (req, res) {
+    var db = req.db;
+    if (req.signedCookies.name)
+    {
+        res.clearCookie('name');
+    }
+    console.log(req.body);
+    var onGetCount = function (err, number)
+    {
+        if (err)
+        {
+            console.log(err.message);
+        }
+        else if(req.body.email&&req.body.password&&req.body.confirm_password)
+        {
+
+            if (req.body.confirm_password === req.body.password)
+            {
+                var newUser = record;
+                newUser._id = req.body.email;
+                newUser.fullname = req.body.fullname;
+                newUser.institution = req.body.institution;
+                newUser.dob = new Date();
+                newUser.acc_no = parseInt(number) + 1;
+                console.log(req.body);
+                newUser.password_hash = bcrypt.hashSync(req.body.password);
+                newUser.abstract = '';
+                newUser.admin = true;
+                var onInsert = function (err, docs)
+                {
+                    if (err)
+                    {
+                        console.log(err.message);
+                        res.render('register', {response: "User Already Exists"});
+                    }
+                    else
+                    {
+                        var name = newUser._id;
+                        res.cookie('name', name, {maxAge: 86400000, signed: true});
+                        res.redirect('/userLogin');
+                    }
+                };
+                mongoUsers.insert(newUser,db, onInsert);
+            }
+            else
+            {
+                console.log("Incorrect Password");
+                res.render('register', {response: "Passwords do not match"});
+            }
+        }
+        else{
+            console.log('no data');
+        }
+    };
+    mongoUsers.getCount({},db, onGetCount);
+});
+
 router.get('/regLogin',function(req,res){
     res.render('register');
 });

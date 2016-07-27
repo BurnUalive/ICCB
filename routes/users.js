@@ -19,7 +19,7 @@ router.get('/logout',function(req,res){
     {
         res.clearCookie('name');
     }
-    res.redirect('/main');
+    res.redirect('/userLogin');
 });
 
 module.exports = router;
