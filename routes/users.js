@@ -6,13 +6,13 @@ var querystring = require('querystring');
 var mongoTransaction = require(path.join(__dirname, '..', 'db', 'mongo-transactions'));
 
 var saleJSON ={
-    id_trans:'ICNAN',
-    id_event:process.env.id_event,
-    id_Merchant:process.env.id_Merchant,
-    id_Password:process.env.id_Password,
-    id_name:''
+    id_trans: 'ICNAN',
+    id_event: process.env.id_event,
+    id_Merchant: process.env.id_Merchant,
+    id_Password: process.env.id_Password,
+    id_name: ''
 };
-var zero = 00000000;
+var zero = 000000;
 /* GET users listing. */
 router.get('/', function(req, res, next) {
     if (req.signedCookies.name)
@@ -75,6 +75,7 @@ router.get('/sale',function(req,res){
         res.redirect('/userLogin');
     }
 });
+
 router.get('/sell',function(req,res){
     if(req.signedCookies.name) {
         res.render('sell');
@@ -83,12 +84,19 @@ router.get('/sell',function(req,res){
         res.redirect('/userLogin');
     }
 });
+
 router.get('/logout',function(req,res){
     if (req.signedCookies.name)
     {
         res.clearCookie('name');
     }
     res.redirect('/userLogin');
+});
+
+router.post('/paymentComplete', function (req, res) {
+  var status = req.body.transactionID;
+  console.log(status);
+  res.redirect('/');
 });
 
 module.exports = router;
