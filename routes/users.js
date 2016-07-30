@@ -86,6 +86,7 @@ router.post('/paymentComplete', function (req, res) {
   var status = req.body.status;
   if (tId && bankRefNo) {
     console.log('success');
+    res.render('success');
   }
   else {
     console.log('fail');
