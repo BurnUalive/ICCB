@@ -32,9 +32,9 @@ router.post('/sale',function(req,res){
     if (req.signedCookies.name) {
         var db = req.db;
         var name = req.body.fullname;
-        var onGetCount = function (err, count) {
-            var num = zero + count;
-            var tId = 'ICCB' + num.toString;
+       /* var onGetCount = function (err, count) {
+            var num = zero + count;*/
+            var tId = 'ICCB' + 000001;
             var onEnd = function (response) {
               if (response.error) {
                 console.log(response.error);
@@ -53,8 +53,8 @@ router.post('/sale',function(req,res){
               .send('id_name=' + name)
               .send('amt_event=1.00')
               .end(onEnd);
-        };
-        mongoTransaction.getCount({}, db, onGetCount);
+       // };
+      //  mongoTransaction.getCount({}, db, onGetCount);
     }
     else{
         res.redirect('/userLogin');
