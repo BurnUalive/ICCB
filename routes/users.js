@@ -42,7 +42,7 @@ router.post('/sale',function(req,res){
         var name = req.body.fullname;
        /* var onGetCount = function (err, count) {
             var num = zero + count;*/
-            var tId = 'ICCB' + 000001;
+            var tId = 'GRA' + 000001;
             var onEnd = function (response) {
               if (response.error) {
                 console.log(response.error);
