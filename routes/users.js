@@ -34,7 +34,7 @@ router.post('/sale',function(req,res){
         var name = req.body.fullname;
        /* var onGetCount = function (err, count) {
             var num = zero + count;*/
-            var tId = 'ICCB' + 000001;
+            var tId = 'GRA' + 000001;
             var onEnd = function (response) {
               if (response.error) {
                 console.log(response.error);
@@ -61,7 +61,7 @@ router.post('/sale',function(req,res){
     }
 });
 router.get('/cred',function(req,res){
-    var tid = "ICCB"+000002;
+    var tid = "GRA"+000002;
     res.status(200).send(
         {
             id_trans:tid,
