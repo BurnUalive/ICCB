@@ -66,8 +66,8 @@ router.get('/cred',function(req,res){
         {
             id_trans:tid,
             id_event: process.env.id_event,
-            id_merchant:process.env.id_merchant,
-            id_password:process.env.id_password,
+            id_merchant:process.env.id_Merchant,
+            id_password:process.env.id_Password,
             amt_event:1.00,
             path: process.env.payURL
         }
