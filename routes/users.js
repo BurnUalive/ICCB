@@ -14,7 +14,7 @@ var saleJSON ={
     id_Password: process.env.id_Password
 };
 
-var zero = 000000;
+const ZERO = 000000;
 /* GET users listing. */
 router.get('/', function(req, res, next) {
     if (req.signedCookies.name)
@@ -45,11 +45,11 @@ router.post('/sale',function(req,res){
               }
             };
             //TODO-calulate amount, currently hard coded as 1.00
-            unirest.post(process.env.payURL)
+            unirest.post(process.env.payURL|| 'testUrl')
               .send('id_trans=' + tId)
-              .send('id_event=' + process.env.id_event)
-              .send('id_merchant=' + process.env.id_merchant)
-              .send('id_password=' + process.env.id_password)
+              .send('id_event=' + process.env.id_event|| 'testEvent')
+              .send('id_merchant=' + process.env.id_merchant||'testMerchant')
+              .send('id_password=' + process.env.id_password||'testPass')
               .send('id_name=' + name)
               .send('amt_event=1.00')
               .end(onEnd);
@@ -60,7 +60,19 @@ router.post('/sale',function(req,res){
         res.redirect('/userLogin');
     }
 });
-
+router.get('/cred',function(req,res){
+    var tid = "ICCB"+000002;
+    res.status(200).send(
+        {
+            id_trans:tid,
+            id_event: process.env.id_event|| 'testEvent',
+            id_merchant:process.env.id_merchant||'testMerch',
+            id_password:process.env.id_password||'testPass',
+            amt_event:1.00,
+            path: process.env.payURL||'testPath'
+        }
+    );
+});
 router.get('/sell',function(req,res){
     if(req.signedCookies.name) {
         res.render('sell');
@@ -84,6 +96,8 @@ router.post('/paymentComplete', function (req, res) {
   var bankRefNo = req.body.bankrefno;
   var txnDate = req.body.txndate;
   var status = req.body.status;
+    var amount = req.body.txnamount;
+    console.log(req.body);
   if (tId && bankRefNo) {
     console.log('success');
     res.render('success');
