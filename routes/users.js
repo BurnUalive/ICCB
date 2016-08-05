@@ -65,11 +65,11 @@ router.get('/cred',function(req,res){
     res.status(200).send(
         {
             id_trans:tid,
-            id_event: process.env.id_event|| 'testEvent',
-            id_merchant:process.env.id_merchant||'testMerch',
-            id_password:process.env.id_password||'testPass',
+            id_event: process.env.id_event,
+            id_merchant:process.env.id_merchant,
+            id_password:process.env.id_password,
             amt_event:1.00,
-            path: process.env.payURL||'testPath'
+            path: process.env.payURL
         }
     );
 });
