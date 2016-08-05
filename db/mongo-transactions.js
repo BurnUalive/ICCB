@@ -57,7 +57,7 @@ exports.fetch = function (doc,db, callback)
         {
             callback(err, null);
         }
-        else if (document && (doc['_id'] === document['_id']))
+        else if (document && (doc['id_trans'] === document['id_trans']))
         {
             callback(null, document);
         }
@@ -68,4 +68,19 @@ exports.fetch = function (doc,db, callback)
     };
     collection.findOne(doc, onFetch);
 
+};
+exports.updateDB = function(query,db,newDoc,callback){
+    var collection = db.collection(collection_name);
+    var onUpdate = function(err,doc){
+            if(err){
+                callback(err,null);
+            }
+            else if(doc){
+                callback(doc);
+            }
+            else{
+                callback(false,null);
+            }
+    };
+    collection.update(query,newDoc,onUpdate);
 };

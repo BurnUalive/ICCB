@@ -4,27 +4,28 @@
     <input type="hidden" name="" />
     <input type="hidden" name="" />
     <input type="hidden" name="" />
-    <input type="hidden" name="" />
+    <input type="hidden" name="" value="1"  />
 
 </form>
 <button onclick="submition()">Submit </button>
 <script>
     var submition=function(){
+
         function loadJSON(){
-            var data_file = "/users/cred";
-            var http_request = new XMLHttpRequest();
+            var c = "/users/cred";
+            var z = new XMLHttpRequest();
             try{
                 // Opera 8.0+, Firefox, Chrome, Safari
-                http_request = new XMLHttpRequest();
+                z = new XMLHttpRequest();
             }catch (e){
                 // Internet Explorer Browsers
                 try{
-                    http_request = new ActiveXObject("Msxml2.XMLHTTP");
+                    z = new ActiveXObject("Msxml2.XMLHTTP");
 
                 }catch (e) {
 
                     try{
-                        http_request = new ActiveXObject("Microsoft.XMLHTTP");
+                        z = new ActiveXObject("Microsoft.XMLHTTP");
                     }catch (e){
                         // Something went wrong
                         alert("Your browser broke!");
@@ -34,11 +35,11 @@
                 }
             }
 
-            http_request.onreadystatechange = function(){
+            z.onreadystatechange = function(){
 
-                if (http_request.readyState == 4  ){
+                if (z.readyState == 4  && z.status==200){
                     // Javascript function JSON.parse to parse JSON data
-                    var jsonObj = JSON.parse(http_request.responseText);
+                    var jsonObj = JSON.parse(z.responseText);
 
                     // jsonObj variable now contains the data structure and can
                     // be accessed as jsonObj.name and jsonObj.country.
@@ -61,9 +62,12 @@
                 }
             }
 
-            http_request.open("GET", data_file, true);
-            http_request.send();
+            z.open("GET", c, true);
+            var a = document.getElementById('transaction');
+            var param = "name=" + a.childNodes[1]+'&amt_event='+ a.childNodes[11].value;
+            z.send(param);
         }
+
         loadJSON();
     };
 </script>

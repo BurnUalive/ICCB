@@ -3,15 +3,23 @@ var router = express.Router();
 var path = require('path');
 var http = require('http');
 var unirest = require('unirest');
-
 var querystring = require('querystring');
 var mongoTransaction = require(path.join(__dirname, '..', 'db', 'mongo-transactions'));
 
 var saleJSON ={
+    id_name:'',
     id_trans: 'ICCB',
     id_event: process.env.id_event,
-    id_Merchant: process.env.id_Merchant,
-    id_Password: process.env.id_Password
+    id_merchant: process.env.id_Merchant,
+    id_password: process.env.id_Password,
+    amt_event: 0,
+    Refno:'',
+    Tpsltranid:'',
+    bankrefno:'',
+    txndate:'',
+    status:'',
+    txnamount:0,
+    path: process.env.payURL
 };
 
 const ZERO = 000000;
@@ -61,17 +69,33 @@ router.post('/sale',function(req,res){
     }
 });
 router.get('/cred',function(req,res){
-    var tid = "ICCB"+000002;
-    res.status(200).send(
-        {
-            id_trans:tid,
-            id_event: process.env.id_event,
-            id_merchant:process.env.id_Merchant,
-            id_password:process.env.id_Password,
-            amt_event:1.00,
-            path: process.env.payURL
+    var db = req.db;
+    var onGetCount = function(err,count){
+        if(err){
+            res.status(500).send('Internal Server Error');
         }
-    );
+        else{
+            var tid = "ICCB"+count;
+            var name = req.body.name;
+            var amount = req.body.amt_event;
+            var data = saleJSON;
+            data.id_name = name;
+            data.id_trans = tid;
+            data.amt_event = amount;
+            var onInsert = function(err,doc){
+                if(err){
+                    res.status(500).send('Internal Server Error');
+                }
+                else{
+                    res.status(200).send(data);
+                }
+            };
+            mongoTransaction(data,db,onInsert)
+        }
+    };
+    mongoTransaction.getCount({},db,onGetCount);
+
+
 });
 router.get('/sell',function(req,res){
     if(req.signedCookies.name) {
@@ -81,7 +105,19 @@ router.get('/sell',function(req,res){
         res.redirect('/userLogin');
     }
 });
-
+router.post('/store',function(req,res){
+    var data = req.body;
+    var db = req.db;
+    var onInsert = function(err,doc){
+        if(err){
+            res.status(500).send('DB error');
+        }
+        else{
+            res.status(200).send(true);
+        }
+    };
+    mongoTransaction.insert(data,db,onInsert);
+});
 router.get('/logout',function(req,res){
     if (req.signedCookies.name)
     {
@@ -89,22 +125,47 @@ router.get('/logout',function(req,res){
     }
     res.redirect('/userLogin');
 });
-
 router.post('/paymentComplete', function (req, res) {
-  var refNo = req.body.Refno;
-  var tId = req.body.Tpsltranid;
-  var bankRefNo = req.body.bankrefno;
-  var txnDate = req.body.txndate;
-  var status = req.body.status;
+    var refNo = req.body.Refno;
+    var tId = req.body.Tpsltranid;
+    var bankRefNo = req.body.bankrefno;
+    var txnDate = req.body.txndate;
+    var status = req.body.status;
     var amount = req.body.txnamount;
-    console.log(req.body);
-  if (tId && bankRefNo) {
-    console.log('success');
-    res.render('success');
-  }
-  else {
-    console.log('fail');
-  }
+    var onFind = function(err,doc){
+        if(err){
+            console.log(err);
+            res.status(500).send("Internal Server Error");
+        }
+        else if(doc){
+
+                if(refNo===doc.id_trans && amount >= doc.amt_event){
+
+                    doc.Refno=refNo;
+                    doc.Tpsltranid=tId;
+                    doc.bankrefno= bankRefNo;
+                    doc.txndate= txnDate;
+                    doc.status=status;
+                    doc.txnamount=amount;
+                    var onUpdateDB = function(err,doc){
+                        if(err){
+                            res.status(500).send('Internal Server Error');
+                        }else if(doc){
+                            res.render('sale',{doc:doc});
+                        }else{
+                            res.status(404).send('Transaction not found')
+                        }
+                    };
+                    mongoTransaction.updateDB({id_trans:refNo},db,doc,onUpdateDB);
+                }
+                else{
+                    res.status(500).send('Transaction Failed');
+                }
+        }else{
+            res.status(404).send("Transaction not found");
+        }
+    };
+    mongoTransaction.fetch({id_trans:refNo},db,onFind);
 });
 
 module.exports = router;
