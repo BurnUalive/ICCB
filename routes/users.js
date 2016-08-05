@@ -90,7 +90,7 @@ router.get('/cred',function(req,res){
                     res.status(200).send(data);
                 }
             };
-            mongoTransaction(data,db,onInsert)
+            mongoTransaction.insert(data,db,onInsert)
         }
     };
     mongoTransaction.getCount({},db,onGetCount);
