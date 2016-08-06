@@ -72,6 +72,7 @@ router.get('/cred',function(req,res){
     var db = req.db;
     var onGetCount = function(err,count){
         if(err){
+            console.log('db count error');
             res.status(500).send('Internal Server Error');
         }
         else{
@@ -84,6 +85,7 @@ router.get('/cred',function(req,res){
             data.amt_event = amount;
             var onInsert = function(err,doc){
                 if(err){
+                    console.log('db insert error');
                     res.status(500).send('Internal Server Error');
                 }
                 else{
