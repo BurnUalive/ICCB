@@ -62,7 +62,7 @@
                 }
             }
             var a = document.getElementById('transaction');
-            var param = "name=" + a.childNodes[1]+'&amt_event='+ a.childNodes[11].value;
+            var param = "name=" + a.childNodes[1].value + '&amt_event=' + a.childNodes[11].value;
             z.open("GET", c + "?" + param, true);
             z.send(param);
         }
