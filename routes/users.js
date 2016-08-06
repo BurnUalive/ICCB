@@ -83,7 +83,8 @@ router.get('/cred',function(req,res){
             data.id_name = name;
             data.id_trans = tid;
             data.amt_event = amount;
-            var onInsert = function(err,doc){
+            var onInsert = function(err){
+                delete data._id;
                 if(err){
                     console.log('db insert error');
                     res.status(500).send('Internal Server Error');
