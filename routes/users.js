@@ -76,8 +76,8 @@ router.get('/cred',function(req,res){
         }
         else{
             var tid = "ICCB"+count;
-            var name = req.body.name;
-            var amount = req.body.amt_event;
+            var name = req.params('name');
+            var amount = req.params('amt_event');
             var data = saleJSON;
             data.id_name = name;
             data.id_trans = tid;
