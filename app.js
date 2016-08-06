@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({extended: false,keepExtensions:true}));
 app.use(cookieParser(process.env.COOKIE_SECRET || 'randomsecretstring', {signed: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 //app.use(busboy);
-const mongodbOptions = {
+var mongodbOptions = {
   db: {
     native_parser: true,
     recordQueryStats: true,
@@ -42,9 +42,9 @@ const mongodbOptions = {
   }
 };
 
-let mongodb;
+var mongodb;
 
-const onConnect = function (err, db) {
+var onConnect = function (err, db) {
   if (!err) {
     mongodb = db;
   }
