@@ -9,7 +9,7 @@ var multer = require('multer');
 var inputRoutes = require(path.join(__dirname, 'routes', 'input'));
 var routes = require(path.join(__dirname, 'routes', 'index'));
 var users = require(path.join(__dirname, 'routes', 'users'));
-var mongo = require('express-mongo-db');
+var mongoClient = require('mongodb');
 var MONGO_URL = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/iccb';
 var app = express();
 
@@ -25,7 +25,41 @@ app.use(bodyParser.urlencoded({extended: false,keepExtensions:true}));
 app.use(cookieParser(process.env.COOKIE_SECRET || 'randomsecretstring', {signed: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 //app.use(busboy);
-app.use(mongo(MONGO_URL));
+const mongodbOptions = {
+  db: {
+    native_parser: true,
+    recordQueryStats: true,
+    retryMiliSeconds: 500,
+    numberOfRetries: 10
+  },
+  server: {
+    socketOptions: {
+      keepAlive: 1,
+      connectTimeoutMS: 10000
+    },
+    auto_reconnect: true,
+    poolSize: 50
+  }
+};
+
+let mongodb;
+
+const onConnect = function (err, db) {
+  if (!err) {
+    mongodb = db;
+  }
+  else {
+    console.log('Failed to connect to MongoDB');
+  }
+}
+
+mongoClient.connect(MONGO_URL, mongodbOptions, onConnect);
+
+app.use(function (req, res, next) {
+  req.db = mongodb;
+  next();
+});
+
 //app.use(multer({ dest: './paper-submissions/'}).single('fileUpload'));
 /*
 app.use(multer({
