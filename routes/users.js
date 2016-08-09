@@ -76,7 +76,7 @@ router.get('/cred',function(req,res){
             res.status(500).send('Internal Server Error');
         }
         else{
-            var tid = "ICCB"+count;
+            var tid = "GRA"+count;
             var name = req.param('name');
             var amount = req.param('amt_event');
             var data = saleJSON;
