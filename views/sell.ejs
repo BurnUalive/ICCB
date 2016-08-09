@@ -1,5 +1,5 @@
 <form method="post" id="transaction">
-    <input name="id_name" type="text" />
+    <input name="id_name" type="text" value="" id="testing" />
     <input type="hidden" name="" />
     <input type="hidden" name="" />
     <input type="hidden" name="" />
@@ -46,7 +46,9 @@
                     var a = document.getElementById('transaction');
                     console.log(a);
                     console.log(jsonObj);
-
+                    var  k = document.getElementById('testing').value;
+                    console.log(k);
+                    a.childNodes[1].value = k;
                     a.childNodes[3].name = 'id_event';
                     a.childNodes[3].value= jsonObj.id_event;
                     a.childNodes[5].name = 'id_trans';
