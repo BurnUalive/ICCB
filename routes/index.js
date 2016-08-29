@@ -106,6 +106,7 @@ router.post('/login', function (req, res) {
             else
             {
                 console.log('Incorrect');
+                res.send("Username or password error");
             }
         }else{
             console.log('bad username');
