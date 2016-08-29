@@ -377,6 +377,9 @@ router.get('/getAbs',function(req,res){
     //res.sendFile(filePath);
         fileStream.pipe(res);
     }
+    else{
+        res.status(404).send("Fle not uploaded");
+    }
 
 
 });
