@@ -369,7 +369,11 @@ router.get('/getAbs',function(req,res){
             Key    : abstract
         };
     var filePath = path.join(__dirname, '../public/docs/'+abstract+'.doc');
-        var fileStream = s3.getObject(options).createReadStream();
+        var fileStream = s3.getObject(options, function(err, data) {
+            if(err){
+                res.status(404).send('Flie not found');
+            }
+        }).createReadStream();
     //res.sendFile(filePath);
         fileStream.pipe(res);
     }
