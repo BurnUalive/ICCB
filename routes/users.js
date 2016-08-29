@@ -21,7 +21,6 @@ var saleJSON ={
     txnamount:0,
     path: process.env.payURL
 };
-
 const ZERO = 000000;
 /* GET users listing. */
 router.get('/', function(req, res, next) {

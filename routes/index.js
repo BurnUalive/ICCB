@@ -13,7 +13,23 @@ var upload = multer({
     limits:{
         files:1
     }
+
 }).single('fileUpload');
+var AWS =require('aws-sdk');
+AWS.config.region = 'us-west-2';
+AWS.config.accessKeyId = process.env.AWS_ACCESS_KEY_ID;
+AWS.config.secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
+const S3_BUCKET = process.env.S3_BUCKET;
+var s3 = new AWS.S3();
+s3.listBuckets(function(err, data) {
+    if (err) { console.log("Error:", err); }
+    else {
+        for (var index in data.Buckets) {
+            var bucket = data.Buckets[index];
+            console.log("Bucket: ", bucket.Name, ' : ', bucket.CreationDate);
+        }
+    }
+});
 var record = {
     _id: '',
     dob: '',
@@ -266,7 +282,6 @@ router.get('/paperFull', function (req, res) {
     res.render('paperFull');
 });
 router.post('/upload',function (req, res){
-
     upload(req, res, function (err) {
         if (err) {
             console.log(req.file);
@@ -287,7 +302,37 @@ router.post('/upload',function (req, res){
                         user.abstract = req.file.filename;
                         var onUpdate = function () {
                             console.log(user);
-                            var filePath = 'public/docs/' + user.abstract;
+                            var file = req.file;
+                            fs.readFile(file.path, function (err, data) {
+                                if (err) throw err; // Something went wrong!
+                                var s3bucket = new AWS.S3({params: {Bucket:'iccb'},signatureVersion: 'v4'});
+                                s3bucket.createBucket(function () {
+                                    console.log(file);
+                                    var params = {
+                                        Key: file.filename, //file.name doesn't exist as a property
+                                        Body: data
+                                    };
+                                    s3bucket.upload(params, function (err, data) {
+                                        // Whether there is an error or not, delete the temp file
+                                        fs.unlink(file.path, function (err) {
+                                            if (err) {
+                                                console.error(err);
+                                            }
+                                           // console.log('Temp File Delete');
+                                        });
+
+                                       // console.log("PRINT FILE:", file);
+                                        if (err) {
+                                            console.log('ERROR MSG: ', err);
+                                            res.status(500).send(err);
+                                        } else {
+                                            console.log('Successfully uploaded data');
+                                            res.status(204).end();
+                                        }
+                                    });
+                                });
+                            });
+                         /*   var filePath = 'public/docs/' + user.abstract;
                             var syspath = path.join(__dirname, '..', filePath);
                             fs.access(syspath, fs.R_OK | fs.W_OK, function (err) {
                                 if (err)console.log(err);
@@ -296,10 +341,12 @@ router.post('/upload',function (req, res){
                                     if (err) {
                                         // console.log('rename error');
                                         console.log(err);
+                                    }else{
+
                                     }
                                 });
-                            });
-                            res.status(204).end();
+                            });*/
+                           // res.status(204).end();
                         };
                         db.collection('users').update({_id: user._id}, user, onUpdate);
                     }
@@ -317,8 +364,15 @@ router.get('/getAbs',function(req,res){
     var abstract = url.split('=')[1];
     if(abstract.length>0)
     {console.log(abstract);
+        var s3 = new AWS.S3({params: {Bucket: 'iccb'},signatureVersion: 'v4'});
+        var options = {
+            Key    : abstract
+        };
     var filePath = path.join(__dirname, '../public/docs/'+abstract+'.doc');
-    res.sendFile(filePath);}
+        var fileStream = s3.getObject(options).createReadStream();
+    //res.sendFile(filePath);
+        fileStream.pipe(res);
+    }
 
 
 });
