@@ -377,13 +377,17 @@ router.get('/getAbs',function(req,res){
             }
 
 
-    }).createReadStream();
-        fileStream.on('error', function (err) {
+    }).createReadStream().on('error', function (err) {
             if(err){console.log(err);}
         res.status(404).end();
-    });
+    }).pipe(res).on('error',function(err){
+                    if(err){console.log(err)}{
+                        res.status(404).end();
+                    }
+                });
+
     //res.sendFile(filePath);
-        fileStream.pipe(res);
+
     }
     else{
         res.status(404).send("File not uploaded");
