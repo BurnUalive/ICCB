@@ -16,7 +16,7 @@ var upload = multer({
 
 }).single('fileUpload');
 var AWS =require('aws-sdk');
-AWS.config.region = 'us-west-2';
+AWS.config.region = 'ap-south-1';
 AWS.config.accessKeyId = process.env.AWS_ACCESS_KEY_ID;
 AWS.config.secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
 const S3_BUCKET = process.env.S3_BUCKET;
@@ -300,7 +300,7 @@ router.post('/upload',function (req, res){
                 else {
                     console.log(user);
                     if(req.file) {
-                        user.abstract = req.file.filename;
+                        user.abstract = req.file.originalname;
                         var onUpdate = function () {
                             console.log(user);
                             var file = req.file;
@@ -310,7 +310,7 @@ router.post('/upload',function (req, res){
                                 s3bucket.createBucket(function () {
                                     console.log(file);
                                     var params = {
-                                        Key: file.filename, //file.name doesn't exist as a property
+                                        Key: file.originalname, //file.name doesn't exist as a property
                                         Body: data
                                     };
                                     s3bucket.upload(params, function (err, data) {
@@ -374,6 +374,7 @@ router.get('/getAbs',function(req,res){
             if(err){
                 res.status(404).send('Flie not found');
             }
+            console.log(data);
         }).createReadStream();
     //res.sendFile(filePath);
         fileStream.pipe(res);

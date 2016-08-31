@@ -20,11 +20,11 @@ router.get('/', function (req, res) {
     if (req.signedCookies.name) {
        var db=req.db;
         var name = req.signedCookies.name;
-        console.log(name);
+      //  console.log(name);
         var onfind = function(err,user){
             if(err){console.log(err);}
             else {
-                console.log(user);
+            //    console.log(user);
                 res.render('input',{user:user});
             }
         };
@@ -42,7 +42,7 @@ router.get('/getAllUsers',function(req,res){
             console.log(err);
         }
         else{
-            console.log(docs);
+            //console.log(docs);
             res.status(200).send(docs);
         }
     };
