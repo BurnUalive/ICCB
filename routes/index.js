@@ -375,16 +375,15 @@ router.get('/getAbs',function(req,res){
                 console.log(err.message);
 
             }
-
-
     }).createReadStream().on('error', function (err) {
-            if(err){console.log(err);
-                this.emit('end');}
+            if(err){console.log(err.message);
+
+                this.emit('end');
+            }
 
     }).pipe(res).on('error',function(err){
                     if(err){console.log(err)}{
                     this.emit('end');
-                res.status(404).send('Flie not found');
                     }
                 });
 
@@ -396,6 +395,9 @@ router.get('/getAbs',function(req,res){
     }
 
 
+});
+router.get('/filenotfound',function(req,res){
+    res.render('filenotfound');
 });
 var fileRename = function(fileName,originalName,callback){
 
