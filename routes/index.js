@@ -379,7 +379,7 @@ router.get('/getAbs',function(req,res){
 
     }).createReadStream().on('error', function (err) {
             if(err){console.log(err);}
-        res.status(404).end();
+       
     }).pipe(res).on('error',function(err){
                     if(err){console.log(err)}{
                         res.status(404).end();
