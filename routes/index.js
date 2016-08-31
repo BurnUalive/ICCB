@@ -373,16 +373,16 @@ router.get('/getAbs',function(req,res){
         var fileStream = s3.getObject(options, function(err, data) {
             if (err) {
                 console.log(err);
-                res.status(404).send('Flie not found');
+
             }
 
 
     }).createReadStream().on('error', function (err) {
             if(err){console.log(err);}
-       
+
     }).pipe(res).on('error',function(err){
                     if(err){console.log(err)}{
-                        res.status(404).end();
+                res.status(404).send('Flie not found');
                     }
                 });
 
