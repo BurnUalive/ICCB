@@ -371,17 +371,22 @@ router.get('/getAbs',function(req,res){
         };
     var filePath = path.join(__dirname, '../public/docs/'+abstract+'.doc');
         var fileStream = s3.getObject(options, function(err, data) {
-            if(err){
+            if (err) {
                 console.log(err);
                 res.status(404).send('Flie not found');
             }
-            console.log(data);
-        }).createReadStream();
+
+
+    }).createReadStream();
+        fileStream.on('error', function (err) {
+            if(err){console.log(err);}
+        res.status(404).end();
+    });
     //res.sendFile(filePath);
         fileStream.pipe(res);
     }
     else{
-        res.status(404).send("Fle not uploaded");
+        res.status(404).send("File not uploaded");
     }
 
 
