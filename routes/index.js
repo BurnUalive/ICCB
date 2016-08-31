@@ -372,16 +372,18 @@ router.get('/getAbs',function(req,res){
     var filePath = path.join(__dirname, '../public/docs/'+abstract+'.doc');
         var fileStream = s3.getObject(options, function(err, data) {
             if (err) {
-                console.log(err);
+                console.log(err.message);
 
             }
 
 
     }).createReadStream().on('error', function (err) {
-            if(err){console.log(err);}
+            if(err){console.log(err);
+                this.emit('end');}
 
     }).pipe(res).on('error',function(err){
                     if(err){console.log(err)}{
+                    this.emit('end');
                 res.status(404).send('Flie not found');
                     }
                 });
