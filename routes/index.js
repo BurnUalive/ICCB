@@ -1,7 +1,6 @@
 var express = require('express');
 var path = require('path');
 var mongoUsers = require(path.join(__dirname, '..', 'db', 'mongo-users'));
-var Busboy = require('busboy');
 var fs = require('fs');
 var bcrypt;
 var multer = require('multer');
@@ -53,8 +52,6 @@ catch (err)
     }
 }
 var router = express.Router();
-//var bcrypt = require('bcryptjs');
-
 var authenticated = function (req, res, next) {
     if (req.signedCookies.name) {
         res.redirect('/users');
@@ -129,10 +126,7 @@ router.get('/articles', function (request, response) {
             }
         });
     }
-});/*
- router.get('/register',function(req,res){
- res.render('register');
- });*/
+});
 router.post('/register', function (req, res) {
     var db = req.db;
     if (req.signedCookies.name)
@@ -305,24 +299,21 @@ router.post('/upload',function (req, res){
                             console.log(user);
                             var file = req.file;
                             fs.readFile(file.path, function (err, data) {
-                                if (err) throw err; // Something went wrong!
+                                if (err) throw err;
                                 var s3bucket = new AWS.S3({params: {Bucket:'iccb'},signatureVersion: 'v4'});
                                 s3bucket.createBucket(function () {
                                     console.log(file);
                                     var params = {
-                                        Key: file.originalname, //file.name doesn't exist as a property
+                                        Key: file.originalname,
                                         Body: data
                                     };
                                     s3bucket.upload(params, function (err, data) {
-                                        // Whether there is an error or not, delete the temp file
+
                                         fs.unlink(file.path, function (err) {
                                             if (err) {
                                                 console.error(err);
                                             }
-                                           // console.log('Temp File Delete');
                                         });
-
-                                       // console.log("PRINT FILE:", file);
                                         if (err) {
                                             console.log('ERROR MSG: ', err);
                                             res.status(500).send(err);
@@ -333,21 +324,7 @@ router.post('/upload',function (req, res){
                                     });
                                 });
                             });
-                         /*   var filePath = 'public/docs/' + user.abstract;
-                            var syspath = path.join(__dirname, '..', filePath);
-                            fs.access(syspath, fs.R_OK | fs.W_OK, function (err) {
-                                if (err)console.log(err);
-                                // console.log(err ? 'no access!' : 'can read/write');
-                                fs.rename(syspath, 'public/docs/' + user.abstract + '.doc', function (err) {
-                                    if (err) {
-                                        // console.log('rename error');
-                                        console.log(err);
-                                    }else{
 
-                                    }
-                                });
-                            });*/
-                           // res.status(204).end();
                         };
                         db.collection('users').update({_id: user._id}, user, onUpdate);
                     }
@@ -355,7 +332,7 @@ router.post('/upload',function (req, res){
             };
             db.collection('users').findOne({_id:name},onfind);
 
-           // fileRename(req.file.filename,req.file.originalname,onUpload)
+
         }
 
     });
@@ -369,25 +346,24 @@ router.get('/getAbs',function(req,res){
         var options = {
             Key    : abstract
         };
-    var filePath = path.join(__dirname, '../public/docs/'+abstract+'.doc');
-        var fileStream = s3.getObject(options, function(err, data) {
-            if (err) {
-                console.log(err.message);
+        var params ={
+            Key:options.Key,
+            Bucket: 'iccb'
+        };
+        s3.headObject(params, function (err, metadata) {
+            if (err && err.code === 'NotFound') {
+               console.log(err);
+                res.status(404).send("File not found");
+            } else {
 
-            }
-    }).createReadStream().on('error', function (err) {
-            if(err){console.log(err.message);
-
-                this.emit('end');
-            }
-
-    }).pipe(res).on('error',function(err){
-                    if(err){console.log(err)}{
-                    this.emit('end');
+                s3.getSignedUrl('getObject',options,function(err,url){
+                    if(err){console.log(err);res.status(404).send('Not found');}
+                    else{
+                        res.redirect(url);
                     }
                 });
-
-    //res.sendFile(filePath);
+            }
+        });
 
     }
     else{
@@ -399,27 +375,6 @@ router.get('/getAbs',function(req,res){
 router.get('/filenotfound',function(req,res){
     res.render('filenotfound');
 });
-var fileRename = function(fileName,originalName,callback){
-
-    var imgPath = 'public/docs/' + fileName;
-    //console.log('file rename');
-    var syspath = path.join(__dirname, '..', imgPath);
-    //console.log(imgPath);
-    //console.log(syspath);
-    var replace_with = originalName.replace(/\s+/g, "").toLowerCase();
-    // console.log(replace_with);
-    fs.access(syspath, fs.R_OK | fs.W_OK, function (err) {
-        // console.log(err ? 'no access!' : 'can read/write');
-        fs.rename(syspath,'public/docs/'+replace_with,function(err){
-            if(err){
-                // console.log('rename error');
-                //console.log(err);
-            }else{
-                callback(replace_with);
-            }
-        });
-    });
-};
 router.get('/committees', function (req, res) {
     res.render('committees');
 });
@@ -453,59 +408,10 @@ router.get('/sponsors',function(req,res){
 router.get('/speakers',function(req,res){
     res.render('speakers');
 });
-/*
-router.post('/register', function (req, res) {
-    let data = {
-        name: req.body.name,
-        salutation: req.body.salutation,
-        designation: req.body.designation,
-        work_place: req.body.work_place,
-        email: req.body.email,
-        mobile: req.body.mobile
-    };
-    let db = req.db.collection('users');
-    const onInsert = function (err) {
-        if (!err) {
-            res.cookie('name', data.id, {maxAge: 86400000, signed: true});
-            res.redirect('/users');
-        }
-    };
-    db.count(function (err, count) {
-        count = count.toString();
-        data.id = count;
-        for (i = 5; i > count.length; i--) {
-            data.id = '0' + data.id;
-        }
-        data.id = 'ICCB2016' + data.id;
-        db.insert(data, onInsert);
-    });
-});*/
+
 router.get('/login', authenticated, function (req, res) {
     res.render('login', {message: null});
-});/*
-router.post('/login', function (req, res) {
-    let data = {
-        id: req.body.username,
-        password: req.body.password
-    };
-    let db = req.db.collection('users');
-    db.findOne({id: data.id}, function (err, doc) {
-        if (!err && doc) {
-            bcrypt.compare(data.password, doc.password, function (err, result) {
-                if (result) {
-                    res.cookie('name', data.id, {maxAge: 86400000, signed: true});
-                    res.redirect('/users');
-                }
-                else {
-                    res.redirect('/login', {message: 'Invalid Credentials'});
-                }
-            });
-        }
-        else {
-            res.redirect('/login', {message: 'Username Not Found'});
-        }
-    });
-});*/
+});
 router.get('/logout', function (req, res) {
     res.clearCookie('name', {});
     res.redirect('/');
