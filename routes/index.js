@@ -339,7 +339,9 @@ router.post('/upload',function (req, res){
 });
 router.get('/getAbs',function(req,res){
     var url = req.url;
-    var abstract = url.split('=')[1];
+    var abstract = decodeURIComponent(url).split('=')[1].split('+').join(' ');
+   // abstract = abstract;
+   // console.log(abstract);
     if(abstract.length>0)
     {console.log(abstract);
         var s3 = new AWS.S3({params: {Bucket: 'iccb'},signatureVersion: 'v4'});
