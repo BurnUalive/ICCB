@@ -22,10 +22,10 @@
                     <br>
                     <form method="get" action="/getAbs">
                         <input type="hidden" name="abstract" value="{{user.abstract}}">
-                        <input class="btn" type="submit" value="get abstract" >
+                        <input class="btn" type="submit" value="get abstract" ng-if="user.hidden">
 
                     </form>
-                    <button class="btn disabled" ng-if="user.abstract.length==0">Not Uploaded</button>
+                    <button class="btn disabled" ng-if="!user.hidden" >File not found</button>
                 </div>
             </li>
             </ul>
@@ -64,8 +64,10 @@
             <input class="btn" type="submit" onclick="document.getElementById('error').innerHTML = 'Uploading, please refresh page after uploading in complete.'"/>
         </div>
     </form>
-    <p style="color:red" id="error"></p>
-    <form action="/getAbs" method="get"><input type="hidden" value="<%= user.abstract%>" name="abstract">
+    <p style="color:red" id="error" ></p>
+    <p style="color:red" id="reupload"></p>
+    <form action="/getAbs" method="get">
+        <input type="hidden" value="<%= user.abstract%>" id="abs" name="abstract">
 
 
         <input type="submit" value="get abstract" class="btn"></form>

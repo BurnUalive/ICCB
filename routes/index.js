@@ -319,7 +319,7 @@ router.post('/upload',function (req, res){
                                             res.status(500).send(err);
                                         } else {
                                             console.log('Successfully uploaded data');
-                                            res.status(204).end();
+                                            res.status(204).redirect('/UploadComplete');
                                         }
                                     });
                                 });
@@ -336,7 +336,36 @@ router.post('/upload',function (req, res){
         }
 
     });
-});
+});/*
+router.get('/checkAbs',function(req,res){
+    var url = req.body.abstract;
+    console.log(req.body);
+    var abstract = decodeURIComponent(url).split('+').join(' ');
+   // abstract = abstract;
+     console.log(abstract);
+    if(abstract.length>0)
+    {//console.log(abstract);
+        var s3 = new AWS.S3({params: {Bucket: 'iccb'},signatureVersion: 'v4'});
+        var options = {
+            Key    : abstract
+        };
+        var params ={
+            Key:options.Key,
+            Bucket: 'iccb'
+        };
+        s3.headObject(params, function (err, metadata) {
+            if (err && err.code === 'NotFound') {
+                console.log(abstract);
+                console.log(err);
+                res.status(200).send(false);
+            } else {
+
+               res.status(200).send(true);
+            }
+        });
+
+    }
+});*/
 router.get('/getAbs',function(req,res){
     var url = req.url;
     var abstract = decodeURIComponent(url).split('=')[1].split('+').join(' ');
@@ -374,8 +403,9 @@ router.get('/getAbs',function(req,res){
 
 
 });
-router.get('/filenotfound',function(req,res){
-    res.render('filenotfound');
+router.get('/UploadComplete',function(req,res){
+    res.render('uploaded');
+
 });
 router.get('/committees', function (req, res) {
     res.render('committees');
