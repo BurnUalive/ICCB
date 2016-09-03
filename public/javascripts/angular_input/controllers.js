@@ -2,7 +2,17 @@ var controllers = {};
 controllers.input = function ($scope, $http, FileUploader, $location) {
     /**
      * Setup
-     */
+     */$http({
+        method: 'GET',
+        url: '/users'
+    }).success(function (data) {
+
+        $scope.state = data.message;
+        if (!$scope.state) {
+            $location.path('/login');
+        }
+        console.log($scope.state);
+    });
 
     $scope.hide=function(d){
         return d.data;
@@ -89,6 +99,17 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
 
 };
 controllers.login = function ($scope, $http, $location,FileUploader) {
+    $http({
+        method: 'GET',
+        url: '/users'
+    }).success(function (data) {
+
+        $scope.state = data.message;
+        if ($scope.state) {
+            $location.path('/input');
+        }
+        console.log($scope.state);
+    });
     $scope.setup = function () {
         $http({
             method: 'GET',
