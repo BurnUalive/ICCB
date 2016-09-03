@@ -10,7 +10,6 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
         $('.collapsible').collapsible({
             accordion: false
         });
-        $scope.state = false;
         $scope.state = user_login($http, checkState);
         $scope.admin = document.getElementById('test').value;
         console.log( document.getElementById('test').value);
