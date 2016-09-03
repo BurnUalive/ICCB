@@ -2,7 +2,7 @@ var controllers = {};
 controllers.input = function ($scope, $http, FileUploader, $location) {
     /**
      * Setup
-     */$http({
+     */ var test =function(){ $http({
         method: 'GET',
         url: '/users'
     }).success(function (data) {
@@ -12,7 +12,8 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
             $location.path('/login');
         }
         console.log($scope.state);
-    });
+    });};
+    test();
 
     $scope.hide=function(d){
         return d.data;
@@ -99,7 +100,7 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
 
 };
 controllers.login = function ($scope, $http, $location,FileUploader) {
-    $http({
+   var test =function(){ $http({
         method: 'GET',
         url: '/users'
     }).success(function (data) {
@@ -109,7 +110,8 @@ controllers.login = function ($scope, $http, $location,FileUploader) {
             $location.path('/input');
         }
         console.log($scope.state);
-    });
+    });};
+    test();
     $scope.setup = function () {
         $http({
             method: 'GET',
