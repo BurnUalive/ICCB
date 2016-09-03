@@ -10,20 +10,22 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
         $('.collapsible').collapsible({
             accordion: false
         });
+        $scope.state = false;
         $scope.state = user_login($http, checkState);
         $scope.admin = document.getElementById('test').value;
         console.log( document.getElementById('test').value);
+        $http({
+            method: 'GET',
+            url: '/input/getAllUsers'
+        }).success(function (data) {
+            $scope.users= data;
+            checkUserAbs();
+
+        });
+
 
         if($scope.admin==true)
             {
-                $http({
-                    method: 'GET',
-                    url: '/input/getAllUsers'
-                }).success(function (data) {
-                    $scope.users= data;
-                    checkUserAbs();
-
-                });
             }else{
          //   checkSingle();
         }
