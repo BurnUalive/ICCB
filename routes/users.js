@@ -26,12 +26,12 @@ const ZERO = 000000;
 router.get('/', function(req, res, next) {
     if (req.signedCookies.name)
     {
-        res.send({message:true});
+        res.render('loggedin',{message:true});
         console.log('users');
 
     }else{
         console.log('user login false');
-        res.send({message:false});
+        res.redirect('/userLogin');
     }
 
 });

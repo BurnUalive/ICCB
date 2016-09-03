@@ -1,15 +1,10 @@
 app.config(function ($routeProvider) {
     $routeProvider
-        .when('/login', {
-            templateUrl: '/login',
-            controller: 'login'
-        })
-        .when('/register',{
-            templateUrl: '/regLogin',
-            controller: 'register'
-        })
-        .otherwise({
-            redirectTo: '/login'
+        .when('/input', {
+            templateUrl: '/input',
+            controller: 'input'
+        }).otherwise({
+            redirectTo: '/input'
         });
 });
 /*

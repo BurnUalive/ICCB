@@ -98,7 +98,7 @@ router.post('/login', function (req, res) {
             {
                 res.cookie('name', doc['_id'], {maxAge: 86400000, signed: true});
                 console.log('logged in');
-                res.redirect('/userLogin')
+                res.redirect('/users')
             }
             else
             {
@@ -168,7 +168,7 @@ router.post('/register', function (req, res) {
                     {
                         var name = newUser._id;
                         res.cookie('name', name, {maxAge: 86400000, signed: true});
-                        res.redirect('/userLogin');
+                        res.redirect('/users');
                     }
                 };
                 mongoUsers.insert(newUser,db, onInsert);
@@ -227,7 +227,7 @@ router.post('/registerAdmin', function (req, res) {
                     {
                         var name = newUser._id;
                         res.cookie('name', name, {maxAge: 86400000, signed: true});
-                        res.redirect('/userLogin');
+                        res.redirect('/users');
                     }
                 };
                 mongoUsers.insert(newUser,db, onInsert);
