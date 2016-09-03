@@ -13,16 +13,17 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
         $scope.state = user_login($http, checkState);
         $scope.admin = document.getElementById('test').value;
         console.log( document.getElementById('test').value);
-        if($scope.admin==true)
-            {$http({
-                method: 'GET',
-                url: '/input/getAllUsers'
-            }).success(function (data) {
-         $scope.users= data;
-                checkUserAbs();
+        $http({
+            method: 'GET',
+            url: '/input/getAllUsers'
+        }).success(function (data) {
+            $scope.users= data;
+            checkUserAbs();
 
-        });}else{
-            checkSingle();
+        });
+        if($scope.admin==true)
+            {}else{
+         //   checkSingle();
         }
     };
     var checkUserAbs = function(){
