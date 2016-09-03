@@ -11,7 +11,18 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
         $('.collapsible').collapsible({
             accordion: false
         });
-        $scope.state = user_login($http, checkState);
+        $http({
+            method: 'GET',
+            url: '/users'
+        }).success(function (data) {
+
+            $scope.state = data.message;
+            if (!$scope.state) {
+                $location.path('/login');
+            }
+            console.log($scope.state);
+        });
+        console.log($scope.state);
         $scope.admin = document.getElementById('test').value;
         console.log( document.getElementById('test').value);
         $http({
@@ -79,7 +90,17 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
 };
 controllers.login = function ($scope, $http, $location,FileUploader) {
     $scope.setup = function () {
-        $scope.state = user_login($http, checkState);
+        $http({
+            method: 'GET',
+            url: '/users'
+        }).success(function (data) {
+
+            $scope.state = data.message;
+            if ($scope.state) {
+                $location.path('/input');
+            }
+            console.log($scope.state);
+        });
         console.log($scope.state);
     };
     var checkState = function (state) {
