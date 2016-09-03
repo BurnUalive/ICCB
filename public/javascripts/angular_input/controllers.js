@@ -2,8 +2,7 @@ var controllers = {};
 controllers.input = function ($scope, $http, FileUploader, $location) {
     /**
      * Setup
-     */$scope.state = false;
-
+     */
 
     $scope.hide=function(d){
         return d.data;
@@ -79,7 +78,6 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
 
 };
 controllers.login = function ($scope, $http, $location,FileUploader) {
-    $scope.state = false;  $scope.state = false;
     $scope.setup = function () {
         $scope.state = user_login($http, checkState);
         console.log($scope.state);
