@@ -2,16 +2,9 @@ var controllers = {};
 controllers.input = function ($scope, $http, FileUploader, $location) {
     /**
      * Setup
-     */
+     */$scope.state = false;
 
-    $http({
-        method: 'GET',
-        url: '/input/getAllUsers'
-    }).success(function (data) {
-        $scope.users= data;
-        checkUserAbs();
 
-    });
     $scope.hide=function(d){
         return d.data;
     };
