@@ -31,7 +31,7 @@ router.get('/', function(req, res, next) {
 
     }else{
         console.log('user login false');
-        res.status(404).send({message:false});
+        res.send({message:false});
     }
 
 });
