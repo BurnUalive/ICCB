@@ -3,6 +3,15 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
     /**
      * Setup
      */
+
+    $http({
+        method: 'GET',
+        url: '/input/getAllUsers'
+    }).success(function (data) {
+        $scope.users= data;
+        checkUserAbs();
+
+    });
     $scope.hide=function(d){
         return d.data;
     };
@@ -77,6 +86,7 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
 
 };
 controllers.login = function ($scope, $http, $location,FileUploader) {
+    $scope.state = false;  $scope.state = false;
     $scope.setup = function () {
         $scope.state = user_login($http, checkState);
         console.log($scope.state);
