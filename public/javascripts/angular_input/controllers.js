@@ -22,7 +22,7 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
                 checkUserAbs();
 
         });}else{
-            checkSingle();
+            //checkSingle();
         }
     };
     var checkUserAbs = function(){
