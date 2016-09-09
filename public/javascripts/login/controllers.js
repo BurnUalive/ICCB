@@ -13,21 +13,22 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
         });
        // console.log($scope.state);
         $scope.admin = document.getElementById('test').value;
-      //  console.log( document.getElementById('test').value);
-        $http({
-            method: 'GET',
-            url: '/input/getAllUsers'
-        }).success(function (data) {
-            $scope.users= data;
-            checkUserAbs();
-
-        });
+        console.log( document.getElementById('test').value);
 
 
-        if($scope.admin==true)
+
+        if($scope.admin=='true')
             {
+                $http({
+                    method: 'GET',
+                    url: '/input/getAllUsers'
+                }).success(function (data) {
+                    $scope.users= data;
+                    checkUserAbs();
+
+                });
             }else{
-         //   checkSingle();
+           checkSingle();
         }
     };
     var checkUserAbs = function(){
@@ -38,26 +39,41 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
                 $scope.users[i].hidden = true;
             }
         }
-    };/*
+        console.log($scope.users);
+    };
     var checkSingle = function(){
         var abs = document.getElementById('abs').value;
-        console.log(abs);
+        var status=$scope.checkAbs(abs,1);
         var text = '';
-        if(!$scope.checkAbs(abs)){
+        if(!status){
             text= "Please re-upload the abstract";
+        }else{
+            text = "Current uploaded abstract is " +abs;
         }
         document.getElementById('reupload').innerHTML = text;
-    };*/
-    $scope.checkAbs = function(abs){
+    };
+    $scope.checkAbs = function(abs,c){
         var params = {
-            abstract:abs
+            abstract:""
         };
-       // console.log(params);
+        params.abstract = abs;
+       console.log(params);
         $http({
             method: 'GET',
             params:params,
             url: '/checkAbs'
         }).success(function (data) {
+            console.log(data);
+            if(c==1){
+                var text = "";
+                if(!data){
+                    text= "Please re-upload the abstract";
+                }else{
+                    text = "Current uploaded abstract is " +abs;
+                    document.getElementById('reupload').style.color = 'green';
+                }
+                document.getElementById('reupload').innerHTML = text;
+            }
            return data;
         });
     };

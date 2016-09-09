@@ -2,8 +2,15 @@
  * Created by Shivam Mathur on 17-02-2016.
  */
 var controllers = {};
+var dates={
+    abstracts:'10th October 2016',
+    notification:'15 October 2016',
+    normalrate:'30th October 2016',
+    accommodations:'5th November 2016'
+};
 controllers.header =  function($scope){};
 controllers.main = function($scope){
+    $scope.dates = dates;
     $(document).ready(function(){
         $('.slider').slider({full_width: true});
     });
@@ -11,7 +18,7 @@ controllers.main = function($scope){
 };
 controllers.register = function($scope){
 
-
+    $scope.dates = dates;
     $(document).ready(function(){
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
         $('.modal-trigger').leanModal();
@@ -65,6 +72,7 @@ $scope.Over = [
 };
 
 controllers.contact = function($scope){
+    $scope.dates = dates;
     $scope.contactus = [
         {
             pos:"Convenor",
@@ -75,13 +83,20 @@ controllers.contact = function($scope){
     }
     ]
 };
-controllers.paperGeneral = function(){};
-controllers.paperAbstracts = function(){};
-controllers.paperFull = function(){};
+controllers.paperGeneral = function($scope){
+    $scope.dates = dates;
+};
+controllers.paperAbstracts = function($scope){
+    $scope.dates = dates;
+};
+controllers.paperFull = function($scope){
+    $scope.dates = dates;
+};
 controllers.invite =function($scope){
-
+    $scope.dates = dates;
 };
 controllers.committees = function($scope){
+    $scope.dates = dates;
     $(document).ready(function(){
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
         $('.modal-trigger').leanModal();
@@ -529,6 +544,10 @@ controllers.committees = function($scope){
                 "name":"Dr. V. Mohana Srinivasan",
                 "institute":"Organizing Secretary",
                 "img":"/images/LWC/image5.png"
+            },{
+                "name":"Dr. G Jayaraman",
+                "institute":"Organizing Secretary",
+                "img":"/images/LWC/image5.jpeg"
             },
             {
                 "name":"Dr. A. Sivakumar",
@@ -554,6 +573,10 @@ controllers.committees = function($scope){
                 "name":"Dr. Jabaz Osborne",
                 "institute":"Joint Secretary",
                 "img":"/images/LWC/image10.png"
+            },{
+                "name":"Dr. N. Ramesh",
+                "institute":"Joint Secretary",
+                "img":"/images/LWC/image6.jpeg"
             }
         ]
     };
@@ -571,6 +594,7 @@ controllers.committees = function($scope){
     };
 };
 controllers.sciProg = function($scope){
+    $scope.dates = dates;
     $scope.programs = [
         {
             "name":'Industrial Biotechnology (IB)',
@@ -644,15 +668,27 @@ controllers.sciProg = function($scope){
         }
     ];
 };
-controllers.accommodation =function(){};
-controllers.venue =function(){
+controllers.accommodation =function($scope){
+    $scope.dates = dates;
+};
+controllers.venue =function($scope){
+    $scope.dates = dates;
     initMap();
 };
-controllers.awards =function(){};
-controllers.exhibition =function(){};
-controllers.posters =function(){};
-controllers.socialPrograms =function(){};
+controllers.awards =function($scope){
+    $scope.dates = dates;
+};
+controllers.exhibition =function($scope){
+    $scope.dates = dates;
+};
+controllers.posters =function($scope){
+    $scope.dates = dates;
+};
+controllers.socialPrograms =function($scope){
+    $scope.dates = dates;
+};
 controllers.ads =function($scope){
+    $scope.dates = dates;
     $(document).ready(function(){
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
         $('.modal-trigger').leanModal();
@@ -756,6 +792,7 @@ controllers.ads =function($scope){
 };
 
 controllers.speakers = function($scope){
+    $scope.dates = dates;
     $scope.speakers = [
         {
             'name':"A. A. Koutinas",
@@ -780,12 +817,6 @@ controllers.speakers = function($scope){
             'img':"/images/Speakers/image3.png",
             'place':"Dr HSG University, Sagar",
             'topic':"Rhizosphere microbiome: Tool for understanding an engineering plant-microbe interaction"
-        },
-        {
-            'name':"Atya Kapley",
-            'img':"/images/Speakers/image4.png",
-            'place':"CSIR-National Environmental Engineering Research Institute, Nagpur",
-            'topic':"Water management: Sharing perspective"
         },{
             'name':"Bhaskar Narayan",
             'img':"/images/Speakers/image5.png",
@@ -911,7 +942,7 @@ controllers.speakers = function($scope){
             'name':"Maria Kanellaki",
             'img':"/images/Speakers/image28.png",
             'place':"University of Patras, Greece",
-            'topic':"New generation biofuel: Promotion of organic acids production from wastes"
+            'topic':"Extremely low temperature fermentations for food production using biotacalysts prepared using solid wastes of food industry"
         },{
             'name':"Munish Puri ",
             'img':"/images/Speakers/image29.png",
@@ -1097,61 +1128,40 @@ controllers.speakers = function($scope){
             'img':"/images/Speakers/image64.png",
             'place':"Universiti Teknologi Malaysia",
             'topic':"Growth improvement of banana and oil palm seedlings using locally isolated nitrogen fixing and phosphate solubilizing bacteria"
+        },
+        {
+            'name':"Sambasivam Periyannan ",
+            'img':"/images/Speakers/image1.jpeg",
+            'place':"CSIRO, Canberra, Australia ",
+            'topic':"Current trends in cloning disease resistance genes in plants"
+        },
+        {
+            'name':"Kaustabh Kumar Maiti  ",
+            'img':"",
+            'place':"NIIST, Trivandrum",
+            'topic':"New Insight of Surface Enhanced Raman Scattering (SERS) Nano-Probe for Spectroscopic Detection and Bioimaging of Human Cancer"
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        ,
+        {
+            'name':"Asad U Khan ",
+            'img':"/images/Speakers/image2.jpeg",
+            'place':"Aligarh Muslim University, Aligarh ",
+            'topic':"Defining the Structural design of b-lactamses: antibiotic resistance mechanism"
+        }
+        ,
+        {
+            'name':"M. Sudhakara Reddy ",
+            'img':"/images/Speakers/image3.jpeg",
+            'place':"Thapar University, Patiala, Punjab",
+            'topic':"Cloning and Characterization of Glutathione Synthesizing Genes in Ectomycorrhizal Fungi and their Role in Metal Tolerance"
+        }
+        ,
+        {
+            'name':"T. Satyanarayana ",
+            'img':"/images/Speakers/image4.jpeg",
+            'place':"University of Delhi South Campus, New Delhi",
+            'topic':"Molecular Approaches for Improving Production and Caralytic Efficiency of Acidic Α-Amylase of the Acidophilic Bacterium Bacillus acidicola"
+        }
 
 
     ];

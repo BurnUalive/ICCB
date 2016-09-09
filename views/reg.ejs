@@ -84,7 +84,7 @@
                     Submission of abstracts
                 </td>
                 <td>
-                    10th September 2016
+                    {{dates.abstracts}}
                 </td>
             </tr>
             <tr>
@@ -92,7 +92,7 @@
                     Acceptance Notification
                 </td>
                 <td>
-                    15 September 2016
+                    {{dates.notification}}
                 </td>
             </tr>
             <tr>
@@ -100,7 +100,7 @@
                     Registration at normal rate
                 </td>
                 <td>
-                    30th September 2016
+                    {{dates.normalrate}}
                 </td>
             </tr>
             <tr>
@@ -108,7 +108,7 @@
                     Booking of Accommodation
                 </td>
                 <td>
-                    15th October 2016
+                    {{dates.accommodations}}
                 </td>
             </tr>
         </table>
@@ -140,10 +140,10 @@
                                 Category
                             </th>
                             <th>
-                                Fee (Rs) before 30th September 2016
+                                Fee (Rs) before {{dates.normalrate}}
                             </th>
                             <th>
-                                Fee (Rs) after 30th September 2016
+                                Fee (Rs) after {{dates.normalrate}}
                             </th>
                         </tr>
                         <tr ng-repeat="a in Indian">
@@ -161,10 +161,10 @@
                                 Category
                             </th>
                             <th>
-                                Fee (in US$) before 30th September 2016
+                                Fee (in US$) before {{dates.normalrate}}
                             </th>
                             <th>
-                                Fee (in US$) after 30th September 2016
+                                Fee (in US$) after {{dates.normalrate}}
                             </th>
                         </tr>
                         <tr ng-repeat="a in Over">

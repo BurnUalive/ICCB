@@ -336,11 +336,12 @@ router.post('/upload',function (req, res){
         }
 
     });
-});/*
+});
 router.get('/checkAbs',function(req,res){
-    var url = req.body.abstract;
-    console.log(req.body);
-    var abstract = decodeURIComponent(url).split('+').join(' ');
+    var url = req.url;
+   // console.log(req.body);
+    console.log(url);
+    var abstract = decodeURIComponent(url).split('=')[1].split('+').join(' ');
    // abstract = abstract;
      console.log(abstract);
     if(abstract.length>0)
@@ -357,15 +358,17 @@ router.get('/checkAbs',function(req,res){
             if (err && err.code === 'NotFound') {
                 console.log(abstract);
                 console.log(err);
-                res.status(200).send(false);
+                res.send(false);
             } else {
 
-               res.status(200).send(true);
+               res.send(true);
             }
         });
 
+    }else{
+        res.send(false);
     }
-});*/
+});
 router.get('/getAbs',function(req,res){
     var url = req.url;
     var abstract = decodeURIComponent(url).split('=')[1].split('+').join(' ');

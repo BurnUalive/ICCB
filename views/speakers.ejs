@@ -15,9 +15,10 @@
                 </p>
             </li>
         </ul>
+        <input ng-model="query" placeholder="Search for Speaker/Topic/Institute" />
         <ul class="collection">
 
-            <li ng-repeat=" speaker in speakers" class="collection-item avatar">
+            <li ng-repeat=" speaker in speakers|filter:query" class="collection-item avatar">
                 <img src="{{speaker.img}}" alt="" class="circle" />
                 <span class="title">{{speaker.name}}</span>
                 <p style="font-size: 80%;">
@@ -36,7 +37,7 @@
                     Submission of abstracts
                 </td>
                 <td>
-                    10th September 2016
+                    {{dates.abstracts}}
                 </td>
             </tr>
             <tr>
@@ -44,7 +45,7 @@
                     Acceptance Notification
                 </td>
                 <td>
-                    15 September 2016
+                    {{dates.notification}}
                 </td>
             </tr>
             <tr>
@@ -52,7 +53,7 @@
                     Registration at normal rate
                 </td>
                 <td>
-                    30th September 2016
+                    {{dates.normalrate}}
                 </td>
             </tr>
             <tr>
@@ -60,7 +61,7 @@
                     Booking of Accommodation
                 </td>
                 <td>
-                    15th October 2016
+                    {{dates.accommodations}}
                 </td>
             </tr>
         </table>
