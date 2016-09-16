@@ -1,9 +1,15 @@
 var controllers = {};
+var dates={
+    abstracts:'25th September 2016',
+    notification:'30th September 2016',
+    normalrate:'10th October 2016',
+    accommodations:'10th October 2016'
+};
 controllers.input = function ($scope, $http, FileUploader, $location) {
     /**
      * Setup
      */
-
+    $scope.dates = dates;
     $scope.hide=function(d){
         return d.data;
     };
@@ -43,13 +49,21 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
     };
     var checkSingle = function(){
         var abs = document.getElementById('abs').value;
-        var status=$scope.checkAbs(abs,1);
+        var status;
         var text = '';
-        if(!status){
-            text= "Please re-upload the abstract";
+        console.log(abs);
+        if(abs==''){
+            text="Please upload new abstract.";
         }else{
-            text = "Current uploaded abstract is " +abs;
+            status=$scope.checkAbs(abs,1);
+            if(!status){
+                text= "Please re-upload the abstract";
+            }else{
+                text = "Current uploaded abstract is " +abs;
+            }
         }
+
+
         document.getElementById('reupload').innerHTML = text;
     };
     $scope.checkAbs = function(abs,c){

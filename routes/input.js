@@ -24,7 +24,7 @@ router.get('/', function (req, res) {
         var onfind = function(err,user){
             if(err){console.log(err);}
             else {
-            //    console.log(user);
+             console.log(user);
                 res.render('input',{user:user});
             }
         };

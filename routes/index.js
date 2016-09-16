@@ -152,6 +152,7 @@ router.post('/register', function (req, res) {
                 newUser.fullname = req.body.fullname;
                 newUser.institution = req.body.institution;
                 newUser.dob = new Date();
+                newUser.journal = req.body.journal;
                 newUser.acc_no = parseInt(number) + 1;
                 console.log(req.body);
                 newUser.password_hash = bcrypt.hashSync(req.body.password,salt);
@@ -210,6 +211,7 @@ router.post('/registerAdmin', function (req, res) {
                 newUser._id = req.body.email;
                 newUser.fullname = req.body.fullname;
                 newUser.institution = req.body.institution;
+                newUser.journal = req.body.journal;
                 newUser.dob = new Date();
                 newUser.acc_no = parseInt(number) + 1;
                 console.log(req.body);

@@ -3,10 +3,10 @@
  */
 var controllers = {};
 var dates={
-    abstracts:'10th October 2016',
-    notification:'15 October 2016',
-    normalrate:'30th October 2016',
-    accommodations:'5th November 2016'
+    abstracts:'25th September 2016',
+    notification:'30th September 2016',
+    normalrate:'10th October 2016',
+    accommodations:'10th October 2016'
 };
 controllers.header =  function($scope){};
 controllers.main = function($scope){
