@@ -97,6 +97,9 @@ router.post('/login', function (req, res) {
             if (bcrypt.compareSync(password, doc['password_hash']))
             {
                 res.cookie('name', doc['_id'], {maxAge: 86400000, signed: true});
+                if(doc['admin']){
+                    res.cookie('admin',doc['admin'].toString(), {maxAge: 86400000, signed: true});
+                }
                 console.log('logged in');
                 res.redirect('/users')
             }

@@ -124,6 +124,9 @@ router.get('/logout',function(req,res){
     if (req.signedCookies.name)
     {
         res.clearCookie('name');
+        if(req.signedCookies.admin){
+            res.clearCookie('admin');
+        }
     }
     res.redirect('/userLogin');
 });

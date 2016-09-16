@@ -35,18 +35,23 @@ router.get('/', function (req, res) {
     }
 });
 router.get('/getAllUsers',function(req,res){
-    var db = req.db;
-    var onFind =function(err,docs){
-        if(err){
-            console.log('err');
-            console.log(err);
-        }
-        else{
-            //console.log(docs);
-            res.status(200).send(docs);
-        }
-    };
-    db.collection('users').find().toArray(onFind);
+    if (req.signedCookies.admin)
+    {
+        var db = req.db;
+        var onFind =function(err,docs){
+            if(err){
+                console.log('err');
+                console.log(err);
+            }
+            else{
+                //console.log(docs);
+                res.status(200).send(docs);
+            }
+        };
+        db.collection('users').find().toArray(onFind);
+    }else{
+        res.status(400).send('unauthorized');
+    }
 });
 
 router.post('/new', function (request, response) {

@@ -77,7 +77,7 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
             params:params,
             url: '/checkAbs'
         }).success(function (data) {
-            console.log(data);
+            //console.log(data);
             if(c==1){
                 var text = "";
                 if(!data){

@@ -20,6 +20,8 @@
                     <br>
                     {{user._id}}
                     <br>
+                    {{user.journal}}
+                    <br />
                     <form method="get" action="/getAbs">
                         <input type="hidden" name="abstract" value="{{user.abstract}}">
                         <input class="btn" type="submit" value="get abstract" ng-if="user.hidden">
@@ -38,6 +40,8 @@
                     <br>
                     {{user._id}}
                     <br>
+                    {{user.journal}}
+                    <br />
                     <button class="btn disabled" ng-if="user.abstract.length==0">Not Uploaded</button>
                 </div>
             </li>
