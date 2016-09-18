@@ -615,7 +615,7 @@ controllers.sciProg = function($scope){
                 'BR 4 Thermochemical platform for fuels and chemicals',
                 'BR 5 Pretreatment Technologies',
                 'BR 6 Biodiesel',
-                'EB 7 Biohydrogen'
+                'BR 7 Biohydrogen'
             ]
         },
         {

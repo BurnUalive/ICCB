@@ -116,20 +116,6 @@ router.post('/login', function (req, res) {
     mongoUsers.fetch(credentials,db, onFetch);
 });
 
-router.get('/articles', function (request, response) {
-    var collection = request.db.collection('articles');
-    var m_category = request.query.main_category;
-    if (m_category) {
-        collection.find({main_category: m_category}).toArray(function (err, docs) {
-            if (err) {
-                response.status(500).send('Internal Server Error');
-            }
-            else {
-                response.json(docs);
-            }
-        });
-    }
-});
 router.post('/register', function (req, res) {
     var db = req.db;
     if (req.signedCookies.name)
