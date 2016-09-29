@@ -1167,4 +1167,7 @@ controllers.speakers = function($scope){
     ];
 
 };
+controllers.sponsors = function($scope){
+    $scope.dates = dates;
+};
 app.controller(controllers);

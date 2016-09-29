@@ -12,7 +12,9 @@ body {
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
 
 }
-
+.sponsorsImg{
+    width:100%;
+}
 .dropdown-content li {
     background: white !important;
 }
