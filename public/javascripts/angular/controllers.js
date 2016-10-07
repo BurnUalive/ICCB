@@ -999,10 +999,10 @@ controllers.speakers = function($scope){
             'place':"Indian Institute of Science, Bangalore",
             'topic':"New insights into the regulation of metabolic pathways in the methylotrophic yeast, Pichia pastoris"
         },{
-            'name':"Poonam Singh - Nee Nigam",
+            'name':"Poonam Singh Nigam",
             'img':"/images/Speakers/image40.png",
             'place':"University of Ulster, UK",
-            'topic':"Screening for dicarbonyl compounds in Manuka honey in terms of methylglyoxal equivalents"
+            'topic':"Polymer Ratio and Concentration effect on viability of encapsulated Probiotic bacteria in complex coacervates"
         },{
             'name':"Pratyoosh Shukla ",
             'img':"/images/Speakers/image41.png",
@@ -1161,8 +1161,20 @@ controllers.speakers = function($scope){
             'img':"/images/Speakers/image4.jpeg",
             'place':"University of Delhi South Campus, New Delhi",
             'topic':"Molecular Approaches for Improving Production and Caralytic Efficiency of Acidic Α-Amylase of the Acidophilic Bacterium Bacillus acidicola"
+        } ,
+        {
+            'name':"Soumya Mukherjee,",
+            'img':"/images/Speakers/image65.png",
+            'place':"Indian Jute Industries' Research Association, Kolkata",
+            'topic':"Tricking Arthrinium malaysianum into Producing Industrially Important Enzymes Under 2-Deoxy D-Glucose Treatment"
         }
-
+        ,
+        {
+            'name':"MADHYASTHA HARISHKUMAR ",
+            'img':"/images/Speakers/image66.jpeg",
+            'place':"University of Miyazaki, JAPAN",
+            'topic':"Arsenicosis in dermal and neuronal perspective: An Update."
+        }
 
     ];
 
