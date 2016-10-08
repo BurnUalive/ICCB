@@ -2,8 +2,8 @@ var controllers = {};
 var dates={
     abstracts:'25th September 2016',
     notification:'30th September 2016',
-    normalrate:'10th October 2016',
-    accommodations:'10th October 2016'
+    normalrate:'15th October 2016',
+    accommodations:'15th October 2016'
 };
 controllers.input = function ($scope, $http, FileUploader, $location) {
     /**
