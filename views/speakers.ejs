@@ -1,7 +1,7 @@
 <div class="row" style="overflow: hidden;height:200px;z-index: -1;position: absolute">
     <img src="/images/wallpapers/neural.jpg" style="max-width: 100%;z-index: -1"/>
 </div>
-<div class="row" style="">
+<div class="row" style="" ng-init="setup()">
     <div id="main_1" class="slab z-depth-1 col m6 offset-m1" style=" padding:2% !important;margin-top: 12%">
 
         <h3>
@@ -15,18 +15,23 @@
                 </p>
             </li>
         </ul>
+
         <input ng-model="query" placeholder="Search for Speaker/Topic/Institute" />
         <ul class="collection">
 
             <li ng-repeat=" speaker in speakers|filter:query" class="collection-item avatar">
                 <img src="{{speaker.img}}" alt="" class="circle" />
-                <span class="title">{{speaker.name}}</span>
+                <span class="title">{{speaker.name}}</span> <br />
                 <p style="font-size: 80%;">
                     <small>{{speaker.place}}</small>
                     <br />
                    <i> {{speaker.topic}}</i>
+
                 </p>
+                <button data-target="modal1" class="btn modal-trigger" ng-click="CV(this.speaker)">CV</button>
+
             </li>
+
         </ul>
     </div>
     <div class="col m3 s12 slab offset-m1 z-depth-1 dates" style="padding: 2% 1% !important;margin-top:12%">
@@ -78,10 +83,28 @@
         </ul>
     </div>
 </div>
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>{{currentSpeaker.name}}</h4>
+        <p>Under Construction</p>
+    </div>
+    <div class="modal-footer">
+        <button class="modal-action modal-close waves-effect waves-green btn-flat ">Close</button>
+    </div>
+</div>
+<script>
+
+    setTimeout(function(){
+        $('.modal-trigger').leanModal();
+    },2000);
+</script>
 <script type="text/javascript">
+
     window.onload = function () {
         if (window.location.href.indexOf("/#/speakers") == -1) {
             window.location.assign("/#/speakers")
         }
+
+
     };
 </script>
