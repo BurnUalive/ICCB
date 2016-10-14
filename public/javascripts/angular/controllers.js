@@ -832,13 +832,13 @@ controllers.speakers = function($scope){
             'img':"/images/Speakers/image3.png",
             'place':"Dr HSG University, Sagar",
             'topic':"Rhizosphere microbiome: Tool for understanding an engineering plant-microbe interaction",
-            'desc':""
+            'desc':" Dr. Ashwani Kumar is an Assistant Professor at the Deptt. of Botany, Dr. Harisingh Gour Central University, Sagar (M.P.), India. He received his Ph.D. degree in 2011 under the guidance of Prof. Satyawati Sharma and Prof. Saroj Mishra from Indian Institute of Technology Delhi, India. Dr. Kumar has been awarded Prestigious Commonwealth Fellowship in Functional Genomics Lab. of Prof. Ravi N Chibbar at University of Saskatchewan, Canada. He did postdoctoral fellowship in the group of Prof. Suren Singh at Durban University of Technology, Durban, South Africa and Prof. Joanna Dames, Rhodes University, Grahamstown, South Africa. He received Claude Leon and National Research Foundation Postdoctoral Fellowship, South Africa. He received UGC-Startup Project grant from UGC, New Delhi. He published 25 research articles in Peer Reviewed Journals (Total Impact factor: 85, Citation: 1350, i10-index 15), 28 Conferences and 14 book chapters. He is also serving as an Editorial board member and reviewers of several journals. His research interest includes rhizosphere microbiome, plant-microbe interactions, biomass deconstruction, & metagenomics."
         },{
             'name':"Bhaskar Narayan",
             'img':"/images/Speakers/image5.png",
             'place':"CSIR-Central Food Technological Research Institute, Mysore",
             'topic':"Bio-TIPS for recovery of utilizable biomolecules from solid wastes from fish/meat processing industries",
-            'desc':""
+            'desc':"Dr N Bhaskar is a Professional from the field of Industrial fishery technology and specializes in aquatic biofunctional materials especially on the recovery of biofunctional substances from fish/animal processing by-products and wastes. His R&D acumen and academic records have been well recognized as evidenced by the various Gold Medals for his academic performance along with various competitive fellowships like Monbukagakusho Scholarship, JSPS-Invitation fellowship (twice) for post-doctoral work apart from awards bestowed by professional associations. His leadership qualities are evident from scientific meetings & conferences he has helmed. He has thus far organized 2 national conferences as a Scientist, three national and one international conference as Organizing Secretary. He has >65 publications, in excess of 100 presentations at national/international conferences, 5 patents & 5 products/processes to his credit. He has been the recipient of the prestigious Prof MSS Award for Best Fisheries Scientist and the prestigious Laljee Godhoo Smarak Nidhi Award (2010). He is the fellow of society for applied biotechnology as well as Association of Food Scientists & Technologists (India). He is also the editor of various Internationally peer-reviewed Journals. He is also on the various committees dealing with education, policy formulation and research."
         },
         {
             'name':"Cristobal N. Aguilar",
@@ -851,19 +851,19 @@ controllers.speakers = function($scope){
             'img':"/images/Speakers/image7.png",
             'place':"Indian School of Mines, Dhanbad",
             'topic':"Bio-flocculation of microalgae",
-            'desc':""
+            'desc':"After completing M.Sc in Biotechnology from Vidyasagar University, West Bengal, I completed my PhD from Birla Institute of Technology, Mesra, Ranchi. Thereby I join Dept. of Environmental Science & Engineering, Indian School of Mines, Dhanbad after receiving INSPIRE Faculty Award from DST, GOI. Presently I had total 10 no. of SCI paper and also a recipient of Young Scientist Award from Association of Microbiologists of India. My research mainly focuses on bio-harvesting of microalgae using different biopolymers. "
         },{
             'name':"Deepak Pant",
             'img':"/images/Speakers/image8.png",
             'place':"Central University of HP",
             'topic':"Hybrid (chemical and biological) method for the management of E-waste",
-            'desc':""
+            'desc':"Dr. Deepak Pant currently working as Dean and Head, Environmental Science, Central University of Himchal Pradesh, Dharamshala, Himachal Pradesh is the recipient of Silver Jubilee Research Fellowship award for the year 2003 by Kumaun University, Nainital (India); UCOST Young Scientist Award 2009, INSA Fallow 2010, DST-SERC Visiting Fallow 2010 and DST- SERC Young Scientist Award 2011 for his research activities. He is also the chairman of Innovation club and active member for  HP state innovation activities Dr Pant has many patents in the area of waste management by green techniques and published 10 books, 38 research papers in various national and international journals. He has guided 02 M.Phil, 04 Ph. D. thesis and 48 M. Sc. dissertations. He is in the editorial board of The Journal of Environmental Science and Sustainability (JESS)."
         },{
             'name':"Dipti Sareen",
             'img':"/images/Speakers/image9.png",
             'place':"Punjab University, Chandigarh",
             'topic':"Novel  lantibiotics: Identification and characterization",
-            'desc':""
+            'desc':"I postgraduated from Panjab University, Chandigarh in Biochemistry (Hons.) in 1996. Earned my Ph.D. in Microbial Biotechnology from Institute of Microbial Technology, Chandigarh in 2001 through Independent CSIR-NET funding. Worked in the area of Mycothiol Biochemistry in a NSF funded project in Dept. of Chemistry & biochemistry, University of California, San Diego, U.S.A. from 2001-2002. Served as a guest faculty in Department of Microbiology, Barkatullah University, Bhopal from 2003-04. Worked as DST-Young Scientist in an independent project, funded by DST (SERC) from 2004-05. Joined Dept. of Biochemistry, PU, Chd. In 2005 as Assistant Prof. (Stage-I). Since then, teaching courses like Enzymes & Bioenergetics, Advanced Enzymology, Molecular Cell biology and Medicinal Biochemistry to Undergraduate and Postgraduate classes. Also, have successfully completed the DST funded project and two DBT funded projects. Following are my research interests:Industrial biotechnology: My laboratory is focusing on novel whole-cell and free-enzyme biocatalysts which could be used for the preparation of enantiopure intermediate molecules for the production of industrially important compounds. The novel enzymes encoding genes are mined from the ever-growing microbial genome database by using bioinformatics tools, followed  by their cloning, overexpression in E. coli as a host and characterization, using HPLC as the analytical tool, for their biocatalytic potential.Therapeutics: Frequent use of antibiotics has led to the emergence of antibiotic resistance in bacteria. Lantibiotic compounds are ribosomally synthesized antimicrobial peptides, against which bacteria are not able to produce resistance, hence making them a good alternative to antibiotics. Having their antimicrobial potential and a limited number, there is a need to identify novel lantibiotics.We have identified novel lantibiotic biosynthetic clusters, by screening the sequenced genomes for LanT homolog, which is a conserved lantibiotic transporter integral to type IB clusters. The strategy resulted in identification of 54 bacterial strains containing the LanT homologs, which are not the known lantibiotic producers. Of these, we could identify eight clusters having two LanM determinants, similar to haloduracin and lichenicidin. Phylogenetic analysis of these clusters suggested that they encode for putative two-component lantibiotic. In the literature, there are very few known examples of two component lantibiotics. Our study has led to the identification of 8 novel putative two-component lantibiotic clusters, which holds the potential for the discovery of more potent novel lantibiotics."
         },{
             'name':"Duu-Jong Lee ",
             'img':"/images/Speakers/image10.png",
@@ -887,7 +887,7 @@ controllers.speakers = function($scope){
             'img':"/images/Speakers/image12.png",
             'place':"Dayananda Sagar College of Engineering, Bangalore",
             'topic':"Innovative plant biotechnological processes for the production of high-value metabolites",
-            'desc':""
+            'desc':"Dr Ravishankar is presently the Professor of Biotechnology (VTU- Visvesvaraya Technological University) at Dayananda Sagar Institutions (DSI), Bengaluru. He is also the Vice President R&D in Life Sciences at (DSI) Bengaluru. He holds a position as the Chairman of Board of Studies in Biotechnology of VTU. He has also served as the Visiting Professor/ scientist to universities abroad viz. Japan, Korea, Taiwan, and Russia. He had a distinguished career as a Scientist of Council of Scientific and Industrial Research at the Central Food Technological Research Institute (CFTRI) for 28 years. His research areas include- Plant secondary metabolites, plant biotechnology, algal biotechnology, and food biotechnology and post-harvest technologies.He holds a Masters and Ph.D degree from M. S. University of Baroda. He has guided 25 students for Ph.D degree, 40 Masters Students, 4 postdocs and 6 international guest scientists from developing countries Along with his students and collaborators, Dr Ravishankar authored over 294 peer reviewed research and review papers. Over 40 patents granted in India and abroad. He is widely travelled as invited speaker in international seminars, symposia and workshops. He has presented over 235 lectures in various scientific meetings in India and abroad.Several Premier International academies and bodies honored him with fellowship Fellow of International Academy of Food Science and Technology (Canada) ; Institute of Food Technologists (USA), Institute of Food Science and Technology (UK).  He was conferred the title as Certified Food Scientist of USA."
         },{
             'name':"Guillermo Raul Castro",
             'img':"/images/Speakers/image13.png",
@@ -899,7 +899,7 @@ controllers.speakers = function($scope){
             'img':"/images/Speakers/image14.png",
             'place':"Guru Nanak Dev University, Amritsar",
             'topic':"Reduction of halogenated acetophenone derivatives by Pseudomonas sp (AP1): Comparing the efficiency of biological and chemical surfactants for improving yield of chiral synthons",
-            'desc':""
+            'desc':" I joined as Assistant Professor in Department of Microbiology, GNDU, Amritsar in 1991 and continuing as Professor since 2008. The work being pursued in research group relates to exploration of metabolic potential of microbial diversity for its ability to transform organic compounds ranging from textile dyes to halogenated organic compounds, biosurfactant production and synthesis of chiral alcohols from ketones and their halo-substituted derivatives. The research work has been funded by grants from funding agencies of Government of India like UGC, DBT and CSIR. The work has been published in the form of approximately 60 papers in International journals and three book chapters."
         },{
             'name':"In Seop Chang",
             'img':"/images/Speakers/image15.png",
@@ -911,7 +911,7 @@ controllers.speakers = function($scope){
             'img':"/images/Speakers/image16.png",
             'place':"Madurai Kamaraj University, Madurai",
             'topic':"Genomic insights into the biofilm formation by Pseudomonas aeruginosa PAO1 ",
-            'desc':""
+            'desc':"Dr. J. Rajendhran obtained his Ph.D from Madurai Kamaraj University and had Postdoctoral studies at studies at Yale University, USA. His research is mainly focused on genomics of pathogens, metagenomics and human microbiomics. He had sequenced more than 25 bacterial strains of industrial and clinical importance. He identified several genes coding for industrial enzymes and antibiotics from various metagenome sources. Dr. Rajendhran has published 70 papers. He is a recipient of Young Scientist award from Association of Microbiologists of India, UGC-Raman postdoctoral fellowship to work in USA and SBS-MKU Genomics award from BRSI."
         },{
             'name':"Jega Jegatheesan",
             'img':"/images/Speakers/image17.png",
