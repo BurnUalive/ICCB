@@ -793,7 +793,7 @@ controllers.ads =function($scope){
 
 controllers.speakers = function($scope){
     $scope.setup = function(){
-        $('.modal-trigger').leanModal();
+        $('.modal-trigger').modal();
     };
     $scope.currentSpeaker = {};
     $scope.CV = function(index){
