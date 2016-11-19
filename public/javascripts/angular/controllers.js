@@ -1259,6 +1259,34 @@ controllers.speakers = function($scope){
             'place':"University of Miyazaki, JAPAN",
             'topic':"Arsenicosis in dermal and neuronal perspective: An Update.",
             'desc':""
+        },
+        {
+            'name':"Suresh Kumar Dubey",
+            'img':"/images/Speakers/",
+            'place':"Banaras Hindu University, Varanasi",
+            'topic':"Molecular ecological perspective of methanogenic archael comminity in rice agroecosystem",
+            'desc':""
+        },
+        {
+            'name':"Veeriah Jegatheesan",
+            'img':"/images/Speakers/",
+            'place':"RMIT University, Australia",
+            'topic':"Application of membrane bioreactor (MBR) for the treatment of persistent pollutants: Textile effluent - a case study",
+            'desc':""
+        },
+        {
+            'name':"Suzana Ferreira-Dias",
+            'img':"/images/Speakers/",
+            'place':"Universidade de Lisboa, Portugal",
+            'topic':"Towards sustainable production of dietic lipids and human milk fat substitutes for the food industry",
+            'desc':""
+        },
+        {
+            'name':"Suren Singh",
+            'img':"/images/Speakers/",
+            'place':"Durban University of Technology, South Africa",
+            'topic':"Agricultural waste as potential biomass for xylooligosaccharide production",
+            'desc':""
         }
 
     ];
