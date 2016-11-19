@@ -1262,28 +1262,28 @@ controllers.speakers = function($scope){
         },
         {
             'name':"Suresh Kumar Dubey",
-            'img':"/images/Speakers/",
+            'img':"/images/Speakers/image67.jpg",
             'place':"Banaras Hindu University, Varanasi",
             'topic':"Molecular ecological perspective of methanogenic archael comminity in rice agroecosystem",
             'desc':""
         },
         {
             'name':"Veeriah Jegatheesan",
-            'img':"/images/Speakers/",
+            'img':"/images/Speakers/image68.jpeg",
             'place':"RMIT University, Australia",
             'topic':"Application of membrane bioreactor (MBR) for the treatment of persistent pollutants: Textile effluent - a case study",
             'desc':"Professor Veeriah Jegatheesan (Jega) has 20 years of experience in water; his research interests are water and wastewater treatment, resource recovery and mathematical modeling. Jega has extensive experience in membrane bioreactors (MBRs) for the treatment of persistent pollutants, heavy metals and car wash wastewater. Recently he is working on membrane crystallization for the recovery of minerals from concentrate and also on forward osmosis to improve water recovery and pre-treatment sludge volume reduction in reverse osmosis process employed for desalination. He is the chief editor for a book series on “Applied Environmental Science and Engineering for a Sustainable Future” published by Springer."
         },
         {
             'name':"Suzana Ferreira-Dias",
-            'img':"/images/Speakers/",
+            'img':"/images/Speakers/image69.jpg",
             'place':"Universidade de Lisboa, Portugal",
             'topic':"Towards sustainable production of dietic lipids and human milk fat substitutes for the food industry",
             'desc':"Suzana Ferreira Dias is Professor of the Instituto Superior de Agronomia (ISA, School of Agriculture), University of Lisbon, Portugal, since 1994. Her main research is centred in the field of Food Engineering, focused on Technology/Biotechnology of Oils and Fats, mainly on the development and optimization of enzyme-catalysed processes alternative to the conventional processes for the production of (i) functional structured lipids, (ii) food flavours (iii) food emulsifiers and (iv) biodiesel, using edible and non-edible oils, (v) olive oil characterization and extraction technology,  (vi) lipid oxidation and (vii) sensory analysis for quality control and development of foods. She has more than 250 publications/communications, which include 3 patents, 79 original and review publications reported in ISI web of knowledge, 8 chapters in international books, 12 chapters in Portuguese books, 42 papers in congress proceedings, etc. Since 2010, she is associate-editor of the Journal of the American Oil Chemists Society. In 2003, she was recognized as specialist in Food Engineering, by the Portuguese Professional Association of Engineers and, since 2016, she is member of the council of Food Engineering Specialists of this association."
         },
         {
             'name':"Suren Singh",
-            'img':"/images/Speakers/",
+            'img':"/images/Speakers/image70.jpg",
             'place':"Durban University of Technology, South Africa",
             'topic':"Agricultural waste as potential biomass for xylooligosaccharide production",
             'desc':"Professor Suren Singh is a Full Professor in the Department of Biotechnology and Food Technology, Faculty of Applied Sciences at the Durban University of Technology. He heads a vibrant Enzyme Technology Research Group, which focuses on the production and application of thermostable enzymes important for the food, detergent, textile, pulp and paper industries and the environment. His group has produced numerous “world firsts” with his hot loving fungus Thermomyces lanuginosus, the genome sequence being one of them. He has published more than 70 journals/publications and 40 international conference presentations."
