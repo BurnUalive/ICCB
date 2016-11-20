@@ -71,6 +71,10 @@ router.get('/getFile',function(req,res){
     var filePath = path.join(__dirname, '../public/docs/ICCB16_Abstract_Template.doc');
     res.sendFile(filePath);
 });
+router.get('/getSchedule',function(req,res){
+    var filePath = path.join(__dirname, '../public/docs/schedule.docx');
+    res.sendFile(filePath);
+});
 router.post('/login', function (req, res) {
     var user = req.body.email;
     var password = req.body.password;

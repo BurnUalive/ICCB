@@ -28,7 +28,7 @@
                    <i> {{speaker.topic}}</i>
 
                 </p>
-                <a href="#modal1" class="btn modal-trigger" ng-click="CV(this.speaker)">CV</a>
+                <a href="#modal1" class="btn modal-trigger" ng-click="CV(this.speaker)" style="color:white !important;" onclick=" return false">CV</a>
 
             </li>
 
@@ -97,7 +97,7 @@
 <script>
 
     setTimeout(function(){
-        $('.modal-trigger').modal();
+        $('.modal-trigger').leanModal();
     },2000);
 </script>
 <script type="text/javascript">
