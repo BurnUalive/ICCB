@@ -75,6 +75,10 @@ router.get('/getSchedule',function(req,res){
     var filePath = path.join(__dirname, '../public/docs/schedule.docx');
     res.sendFile(filePath);
 });
+router.get('/getPosterSchedule',function(req,res){
+    var filePath = path.join(__dirname, '../public/docs/poster.pdf');
+    res.sendFile(filePath);
+});
 router.post('/login', function (req, res) {
     var user = req.body.email;
     var password = req.body.password;
